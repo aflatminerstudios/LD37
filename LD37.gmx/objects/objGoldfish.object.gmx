@@ -213,12 +213,13 @@ if (direction != goalDir) {
   direction += s * turnSpeed;
 }    
 
-if (x &gt; 0 &amp;&amp; x &lt; room_width) {
+var barrierCollision = position_meeting(x + hspeed, y + vspeed, objBarrier);
+
+if (!barrierCollision) {
   x += hspeed;
-}
-if (y &gt; 0 &amp;&amp; y &lt; room_height) {
   y += vspeed;
 }
+
 
 speed = 0;
 

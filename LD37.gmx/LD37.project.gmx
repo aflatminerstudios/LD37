@@ -12,6 +12,7 @@
       <sprite>sprites\sprGraybox64x64</sprite>
     </sprites>
     <sprite>sprites\sprGoldfish</sprite>
+    <sprite>sprites\sprBarrier</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgGrid</background>
@@ -39,6 +40,7 @@
     <object>objects\objFishFoodDispenser</object>
     <object>objects\objGameControl</object>
     <object>objects\objTimer</object>
+    <object>objects\objBarrier</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>

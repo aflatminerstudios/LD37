@@ -55,6 +55,10 @@
     <instance objName="objFishFoodDispenser" x="864" y="-32" name="inst_DC271557" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objGameControl" x="0" y="0" name="inst_0EEBC035" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTimer" x="288" y="0" name="inst_25EFC81A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBarrier" x="-32" y="0" name="inst_272EF0E0" locked="0" code="" scaleX="1" scaleY="38" colour="4294967295" rotation="0"/>
+    <instance objName="objBarrier" x="0" y="1184" name="inst_F29E077F" locked="0" code="" scaleX="51" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBarrier" x="1600" y="0" name="inst_25D2DBD2" locked="0" code="" scaleX="1" scaleY="37.1612892150879" colour="4294967295" rotation="0"/>
+    <instance objName="objBarrier" x="-32" y="-32" name="inst_BD954D34" locked="0" code="" scaleX="52" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
