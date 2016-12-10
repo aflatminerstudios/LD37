@@ -42,6 +42,7 @@
     <script>scripts\scrFeedGoldfish.gml</script>
     <script>scripts\scrGameOver.gml</script>
     <script>scripts\scrIsInView.gml</script>
+    <script>scripts\scrSendHighScore.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
@@ -58,12 +59,16 @@
     <object>objects\objBarrier</object>
     <object>objects\objCatPaw</object>
     <object>objects\canDespawn</object>
+    <object>objects\objHighScore</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
     <room>rooms\roomTitle</room>
     <room>rooms\roomTank</room>
   </rooms>
+  <constants number="1">
+    <constant name="SERVER_NAME">www.catbirdgames.com/fish/</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
