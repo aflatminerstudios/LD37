@@ -29,7 +29,7 @@
 maxForward = 2;
 maxSpeed = 5;
 
-turnSpeed = 1;
+turnSpeed = 5;
 
 numFrames = 60;
 
@@ -129,10 +129,10 @@ if (curForward &gt; maxSpeed) {
 }
 
 if (direction != goalDir) {
-  var s = angle_difference(goalDir, direction);
-  direction -= s * turnSpeed;
-}    
   show_debug_message("goal: " + string(goalDir) + " current: " + string(direction));
+  var s = sign(angle_difference(goalDir, direction));
+  direction += s * turnSpeed;
+}    
 
 if (x &gt; 0 &amp;&amp; x &lt; room_width) {
   x += hspeed;

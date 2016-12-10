@@ -6,8 +6,9 @@ with (objGoldfish) {
 
   curFrame = 0;  
   goalDir = dir;
-  if (speed <= 0) {
-    direction = dir;    
+
+  if (curForward <= 0) {
+    direction = dir;  
   }  
 }
 
