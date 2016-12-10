@@ -11,12 +11,19 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bgGrid</background>
+    <background>background\bgTank</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
+    <objects name="Logo/Title Screen">
+      <object>objects\objLogoControl</object>
+      <object>objects\objTitleControl</object>
+    </objects>
     <object>objects\objGoldfish</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\roomLogo</room>
+    <room>rooms\roomTitle</room>
     <room>rooms\roomTank</room>
   </rooms>
   <help>
