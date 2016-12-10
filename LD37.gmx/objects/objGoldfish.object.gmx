@@ -281,6 +281,11 @@ scrFeedGoldfish(self.id, flakePower);
 with (other) {
   instance_destroy();
 }
+
+with (objGameControl) {
+  flakesCollected += 1;
+  score += flakeScore;
+}
 </string>
           </argument>
         </arguments>

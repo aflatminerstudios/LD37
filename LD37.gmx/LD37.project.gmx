@@ -37,6 +37,8 @@
     <object>objects\objGoldfish</object>
     <object>objects\objFishFlakes</object>
     <object>objects\objFishFoodDispenser</object>
+    <object>objects\objGameControl</object>
+    <object>objects\objTimer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
