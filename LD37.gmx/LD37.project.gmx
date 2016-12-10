@@ -13,6 +13,7 @@
   <backgrounds name="background">
     <background>background\bgGrid</background>
     <background>background\bgTank</background>
+    <background>background\bgForeground</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
