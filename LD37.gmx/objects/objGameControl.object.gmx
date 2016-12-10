@@ -34,8 +34,8 @@ flakeMax = 7;
 //for flake dispenser
 alarm[0] = room_speed * (random(flakeMax - flakeMin) + flakeMin);
 
-catMin = 1;
-catMax = 3;
+catMin = 5;
+catMax = 30;
 
 //Spawn cat paw
 alarm[1] = room_speed * (random(catMax - catMin) + catMin);
