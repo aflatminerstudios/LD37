@@ -164,6 +164,8 @@ alarm[0] = room_speed * starveTime;
     scrMoveGoldfish(90);
   } else if (scrIsDownPressed()) {
     scrMoveGoldfish(270);
+  } else {
+    scrCheckMouse();
   }
 //}
 </string>
@@ -186,7 +188,7 @@ alarm[0] = room_speed * starveTime;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Move
+            <string>///Move/change direction
 speed = curForward;
 if (curFrame &lt; accelFrames) {  
     
@@ -208,7 +210,9 @@ if (curForward &gt; maxSpeed) {
   curForward = maxSpeed;
 }
 
-if (direction != goalDir) {
+var diff = abs(direction - goalDir);
+
+if (diff &gt; turnSpeed) {
   var s = sign(angle_difference(goalDir, direction));
   direction += s * turnSpeed;
 }    
@@ -220,6 +224,8 @@ if (!barrierCollision) {
   y += vspeed;
 }
 
+//TODO:  FIX THIS!!!!!!!!
+/*
 if (direction &gt; 90 &amp;&amp; direction &lt; 270) {
   //image_xscale = -1;
   
@@ -238,9 +244,10 @@ if (direction &gt; 90 &amp;&amp; direction &lt; 270) {
 }
 
 
-
 image_angle = viewDir;
+*/
 
+image_angle = direction;
 speed = 0;
 
   
