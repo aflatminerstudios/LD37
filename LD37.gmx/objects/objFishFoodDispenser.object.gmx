@@ -65,6 +65,8 @@ instance_create(xPos, y, foodType);
 dispenseQuantity--;
 if(dispenseQuantity &gt; 0)
   alarm[0] = room_speed/foodPerSecond;
+else
+  instance_destroy();
 </string>
           </argument>
         </arguments>
