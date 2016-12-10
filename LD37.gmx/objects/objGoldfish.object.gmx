@@ -29,6 +29,8 @@
 maxForward = 2;
 maxSpeed = 5;
 
+turnSpeed = 1;
+
 numFrames = 60;
 
 decelPct = 0.6;
@@ -48,6 +50,7 @@ curForward = 0;
 
 //initial direction
 direction = 0;
+goalDir = 0;
 </string>
           </argument>
         </arguments>
@@ -71,9 +74,18 @@ direction = 0;
           <argument>
             <kind>1</kind>
             <string>///Check for input
-if (scrIsLeftPressed()) {
-  scrMoveGoldfish(180);
-}
+
+//if (curFrame &gt; accelFrames) {
+  if (scrIsLeftPressed()) {
+    scrMoveGoldfish(180);
+  } else if (scrIsRightPressed()) {
+    scrMoveGoldfish(0);
+  } else if (scrIsUpPressed()) {
+    scrMoveGoldfish(90);
+  } else if (scrIsDownPressed()) {
+    scrMoveGoldfish(270);
+  }
+//}
 </string>
           </argument>
         </arguments>
@@ -116,8 +128,21 @@ if (curForward &gt; maxSpeed) {
   curForward = maxSpeed;
 }
 
-x += hspeed;
-y += vspeed;
+if (direction != goalDir) {
+  var s = angle_difference(goalDir, direction);
+  direction -= s * turnSpeed;
+}    
+  show_debug_message("goal: " + string(goalDir) + " current: " + string(direction));
+
+if (x &gt; 0 &amp;&amp; x &lt; room_width) {
+  x += hspeed;
+}
+if (y &gt; 0 &amp;&amp; y &lt; room_height) {
+  y += vspeed;
+}
+
+speed = 0;
+
   
 </string>
           </argument>
