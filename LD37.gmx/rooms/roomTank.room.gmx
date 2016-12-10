@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="objGoldfish" x="768" y="576" name="inst_1AB0CB60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objFishFoodDispenser" x="864" y="-32" name="inst_DC271557" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

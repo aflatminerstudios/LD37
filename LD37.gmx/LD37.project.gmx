@@ -6,8 +6,11 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sprGraybox32x32</sprite>
-    <sprite>sprites\sprGraybox64x64</sprite>
+    <sprites name="Placeholders">
+      <sprite>sprites\sprGraybox16x16</sprite>
+      <sprite>sprites\sprGraybox32x32</sprite>
+      <sprite>sprites\sprGraybox64x64</sprite>
+    </sprites>
     <sprite>sprites\sprGoldfish</sprite>
   </sprites>
   <backgrounds name="background">
@@ -31,6 +34,8 @@
       <object>objects\objTitleControl</object>
     </objects>
     <object>objects\objGoldfish</object>
+    <object>objects\objFishFlakes</object>
+    <object>objects\objFishFoodDispenser</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
