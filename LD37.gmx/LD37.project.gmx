@@ -20,6 +20,7 @@
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
+    <sprite>sprites\sprTallRibbonPlant</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -58,6 +59,10 @@
     <object>objects\objBarrier</object>
     <object>objects\objCatPaw</object>
     <object>objects\canDespawn</object>
+    <objects name="Plants">
+      <object>objects\objPlant</object>
+      <object>objects\objTallRibbonPlant</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
