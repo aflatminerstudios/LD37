@@ -8,12 +8,22 @@
   <sprites name="sprites">
     <sprite>sprites\sprGraybox32x32</sprite>
     <sprite>sprites\sprGraybox64x64</sprite>
+    <sprite>sprites\sprGoldfish</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgGrid</background>
     <background>background\bgTank</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\scrMoveGoldfish.gml</script>
+    <scripts name="input">
+      <script>scripts\scrIsLeftPressed.gml</script>
+      <script>scripts\scrIsUpPressed.gml</script>
+      <script>scripts\scrIsDownPressed.gml</script>
+      <script>scripts\scrIsRightPressed.gml</script>
+    </scripts>
+  </scripts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
       <object>objects\objLogoControl</object>
