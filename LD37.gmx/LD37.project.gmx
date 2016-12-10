@@ -40,6 +40,7 @@
       <script>scripts\scrCheckMouse.gml</script>
     </scripts>
     <script>scripts\scrFeedGoldfish.gml</script>
+    <script>scripts\scrGameOver.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Logo/Title Screen">

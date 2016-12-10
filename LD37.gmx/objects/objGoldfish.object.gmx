@@ -271,10 +271,9 @@ speed = 0;
             <string>///Check hunger
 
 if (hunger &lt; -100) {
-  show_message("Oh no! You ate too much!");
-  room_restart();
+  scrGameOver("Oh no! You ate too much!");
 } else if (hunger &gt; 100) {
-  show_message("Oh no! You starved to death!");
+  scrGameOver("Oh no! You starved to death!");
   room_restart();
 } else if (hunger &gt; 75 &amp;&amp; sprite_index != sprGoldfishHungry) {
   var oldIndex = image_index;
@@ -312,8 +311,7 @@ if (hunger &lt; -100) {
             <string>///Cat collision
 
 if (place_meeting(x, y, objCatPaw)) {
-  show_message("The cat ate you! You lose!");
-  room_restart();
+  scrGameOver("The cat ate you! You lose!");
 }
 </string>
           </argument>
