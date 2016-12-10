@@ -27,9 +27,9 @@
       <script>scripts\scrIsUpPressed.gml</script>
       <script>scripts\scrIsDownPressed.gml</script>
       <script>scripts\scrIsRightPressed.gml</script>
+      <script>scripts\scrCheckMouse.gml</script>
     </scripts>
     <script>scripts\scrFeedGoldfish.gml</script>
-    <script>scripts\scrCheckMouse.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Logo/Title Screen">

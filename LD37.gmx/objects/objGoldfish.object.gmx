@@ -29,7 +29,7 @@
 maxForward = 2;
 maxSpeed = 5;
 
-turnSpeed = 5;
+turnSpeed = 2;
 
 numFrames = 60;
 
@@ -224,18 +224,16 @@ if (!barrierCollision) {
   y += vspeed;
 }
 
-//TODO:  FIX THIS!!!!!!!!
-/*
 if (direction &gt; 90 &amp;&amp; direction &lt; 270) {
-  //image_xscale = -1;
+  image_xscale = -1;
   
   if (direction &lt; 180) {
-    viewDir = 180 - direction;
+    viewDir = direction - 180;
   } else if (direction &gt; 180) {
-    viewDir = 270 + (270 - direction);
-    show_debug_message("direction: " + string(direction) + " viewdir: " + string(viewDir));
-  }  else {
-    viewDir = 0;
+    viewDir = direction - 180;
+    show_debug_message("direction: " + string(direction) + " viewdir: " + string(viewDir));    
+  } else {
+    viewDir = 0;  
   }
   
 } else {
@@ -245,9 +243,9 @@ if (direction &gt; 90 &amp;&amp; direction &lt; 270) {
 
 
 image_angle = viewDir;
-*/
 
-image_angle = direction;
+
+//image_angle = direction;
 speed = 0;
 
   
