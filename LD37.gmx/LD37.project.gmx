@@ -5,8 +5,13 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound"/>
-  <sprites name="sprites"/>
-  <backgrounds name="background"/>
+  <sprites name="sprites">
+    <sprite>sprites\sprGraybox32x32</sprite>
+    <sprite>sprites\sprGraybox64x64</sprite>
+  </sprites>
+  <backgrounds name="background">
+    <background>background\bgGrid</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\objGoldfish</object>
