@@ -220,6 +220,26 @@ if (!barrierCollision) {
   y += vspeed;
 }
 
+if (direction &gt; 90 &amp;&amp; direction &lt; 270) {
+  //image_xscale = -1;
+  
+  if (direction &lt; 180) {
+    viewDir = 180 - direction;
+  } else if (direction &gt; 180) {
+    viewDir = 270 + (270 - direction);
+    show_debug_message("direction: " + string(direction) + " viewdir: " + string(viewDir));
+  }  else {
+    viewDir = 0;
+  }
+  
+} else {
+  image_xscale = 1;
+  viewDir = direction;
+}
+
+
+
+image_angle = viewDir;
 
 speed = 0;
 
