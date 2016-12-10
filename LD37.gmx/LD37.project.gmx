@@ -14,6 +14,10 @@
     <sprite>sprites\sprGoldfish</sprite>
     <sprite>sprites\sprGoldfishFull</sprite>
     <sprite>sprites\sprGoldfishHungry</sprite>
+    <sprites name="TitleScreen">
+      <sprite>sprites\sprTitleParallax</sprite>
+      <sprite>sprites\sprTitleFG</sprite>
+    </sprites>
     <sprite>sprites\sprBarrier</sprite>
   </sprites>
   <backgrounds name="background">
@@ -37,6 +41,8 @@
     <objects name="Logo/Title Screen">
       <object>objects\objLogoControl</object>
       <object>objects\objTitleControl</object>
+      <object>objects\objTitleFG</object>
+      <object>objects\objTitleParallax</object>
     </objects>
     <object>objects\objGoldfish</object>
     <object>objects\objFishFlakes</object>
