@@ -41,6 +41,7 @@
     </scripts>
     <script>scripts\scrFeedGoldfish.gml</script>
     <script>scripts\scrGameOver.gml</script>
+    <script>scripts\scrIsInView.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
@@ -56,6 +57,7 @@
     <object>objects\objTimer</object>
     <object>objects\objBarrier</object>
     <object>objects\objCatPaw</object>
+    <object>objects\canDespawn</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
