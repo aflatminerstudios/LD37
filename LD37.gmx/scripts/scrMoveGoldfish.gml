@@ -4,11 +4,11 @@ var dir = argument0;
 
 with (objGoldfish) {
 
-  var dX = lengthdir_x(1, dir);
-  var dY = lengthdir_y(1, dir);
+  curFrame = 0;  
+  goalDir = dir;
 
-
-  show_debug_message(direction);
-  show_debug_message(speed);
+  if (curForward <= 0) {
+    direction = dir;  
+  }  
 }
 
