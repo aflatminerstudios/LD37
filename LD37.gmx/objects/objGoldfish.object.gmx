@@ -231,7 +231,6 @@ if (direction &gt; 90 &amp;&amp; direction &lt; 270) {
     viewDir = direction - 180;
   } else if (direction &gt; 180) {
     viewDir = direction - 180;
-    show_debug_message("direction: " + string(direction) + " viewdir: " + string(viewDir));    
   } else {
     viewDir = 0;  
   }
@@ -277,6 +276,18 @@ if (hunger &lt; -100) {
 } else if (hunger &gt; 100) {
   show_message("Oh no! You starved to death!");
   room_restart();
+} else if (hunger &gt; 75 &amp;&amp; sprite_index != sprGoldfishHungry) {
+  var oldIndex = image_index;
+  sprite_index = sprGoldfishHungry;
+  image_index = oldIndex;
+} else if (hunger &lt; -75 &amp;&amp; sprite_index != sprGoldfishFull) {
+  var oldIndex = image_index;
+  sprite_index = sprGoldfishFull;
+  image_index = oldIndex;
+} else if (sprite_index != sprGoldfish) {
+  var oldIndex = image_index;
+  sprite_index = sprGoldfish;
+  image_index = oldIndex;
 }
 </string>
           </argument>

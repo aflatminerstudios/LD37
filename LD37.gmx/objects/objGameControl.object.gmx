@@ -85,9 +85,13 @@ alarm[0] = room_speed * (random(flakeMax - flakeMin) + flakeMin);
 
 var dispenser = instance_create( 0, -32, objFishFoodDispenser);
 
+//randomize aspects of flake dispenser
+dispenser.foodPerSecond = 1 + irandom(3);
+dispenser.dispenseQuantity = 5 + irandom(10);
+dispenser.dispenseWidth = 100 + irandom(200);
+
 //Place it so that all of its flakes will be in the room
-var flakeX = random(room_width - dispenser.dispenseWidth) + dispenser.dispenseWidth / 2 ;
-dispenser.x = flakeX;
+dispenser.x = random(room_width - dispenser.dispenseWidth) + dispenser.dispenseWidth / 2 ;
 
 //new random time
 alarm[0] = room_speed * (random(flakeMax - flakeMin) + flakeMin);

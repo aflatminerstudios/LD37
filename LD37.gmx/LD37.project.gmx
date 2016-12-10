@@ -12,6 +12,8 @@
       <sprite>sprites\sprGraybox64x64</sprite>
     </sprites>
     <sprite>sprites\sprGoldfish</sprite>
+    <sprite>sprites\sprGoldfishFull</sprite>
+    <sprite>sprites\sprGoldfishHungry</sprite>
     <sprite>sprites\sprBarrier</sprite>
   </sprites>
   <backgrounds name="background">
