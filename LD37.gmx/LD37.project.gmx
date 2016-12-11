@@ -27,10 +27,8 @@
     <sprite>sprites\sprCatPaw</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprites name="Plants">
-      <sprite>sprites\sprTallRibbonPlantGreen</sprite>
-      <sprite>sprites\sprTallRibbonPlantBrown</sprite>
-      <sprite>sprites\sprShortRibbonPlantGreen</sprite>
-      <sprite>sprites\sprShortRibbonPlantBrown</sprite>
+      <sprite>sprites\sprTallPlantForeground</sprite>
+      <sprite>sprites\sprTallPlantBackground</sprite>
     </sprites>
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
@@ -100,8 +98,8 @@
       <object>objects\canDespawn</object>
       <objects name="Plants">
         <object>objects\objPlant</object>
-        <object>objects\objTallRibbonPlant</object>
-        <object>objects\objShortRibbonPlant</object>
+        <object>objects\objTallPlantForeground</object>
+        <object>objects\objTallPlantBackground</object>
       </objects>
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>

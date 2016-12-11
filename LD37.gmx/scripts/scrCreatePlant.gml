@@ -1,9 +1,9 @@
 /// scrCreatePlant()
 
-var newPlantType = choose(objTallRibbonPlant, objTallRibbonPlant, objShortRibbonPlant);
+var newPlantType = choose(objTallPlantForeground, objTallPlantBackground);
 
-var possibleX = irandom_range(0, room_width); // Update to actual tank dimensions! -- TODO
-var possibleY = room_height - 200 + irandom(40);
+var possibleX = irandom_range(275, room_width - 275); // Update to actual tank dimensions! -- TODO
+var possibleY = room_height - 170 + irandom(20);
 
 var newInhabitant = instance_create(possibleX, possibleY, newPlantType);
 if(scrIsInFrontOfFish(newInhabitant)) {
