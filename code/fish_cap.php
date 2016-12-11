@@ -23,16 +23,16 @@ $stmt2 = $dbConnection->prepare("SELECT * FROM ".$achievetable." WHERE user=:use
 
 $stmt2->execute(array('user' => $user));
 
-$list = $stmt->fetch(PDO::FETCH_ASSOC);
+$list = $stmt2->fetch(PDO::FETCH_ASSOC);
 
 if ($list['eat35flakes'] == false && $totalFlakes >= 35) {
 	$list['eat35flakes'] = true;
 	echo "eat35flakes ";
 }
 
-if ($list['totalGames20'] == false && $numGames >= 20) {
-	$list['totalGames20'] == true;
-	echo "totalGames20 ";
+if ($list['totalgames20'] == false && $numGames >= 20) {
+	$list['totalgames20'] == true;
+	echo "totalgames20 ";
 }
 
 if ($list['totalScore1000'] == false && $totalScore >= 1000) {
@@ -40,11 +40,8 @@ if ($list['totalScore1000'] == false && $totalScore >= 1000) {
 	echo "totalScore1000 ";
 }
 
-if ($list['totalTime15Min'] == false && $sumTime >= (15 * 60 * 1000)) {
-	$list['totalTime15Min'] == true;
-	echo "totalTime15Min ";
+if ($list['totaltime15Min'] == false && $sumTime >= (15 * 60 * 1000)) {
+	$list['totaltime15Min'] == true;
+	echo "totaltime15Min ";
 }
-
-$stmt3 = $dbConnection->prepare("UPDATE ".$achievetable." SET eat35flakes=:flakes, totalGames20=:games, totalScore1000=:score, totalTime15Min=:time WHERE user=:user");
-$stmt3->execute(array('flakes' => $list['eat35flakes'], 'games' => $list['totalGames20'], 'score' => $list['totalScore1000'], 'time' => $list['totalTime15Min'], 'user' => $user));
 ?>

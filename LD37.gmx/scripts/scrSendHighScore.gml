@@ -14,13 +14,14 @@ var address = SERVER_ADDRESS + "fish_ahs.php?user=" + string(user) + "&score=" +
 
 with (objHighScoreSend) {
 
-  show_debug_message(address);
+
   get = http_get(address);
 //  show_debug_message("get = " + string(get));
 }
 
-var address = SERVER_ADDRESS + "fish_cap.php?user=" + string(user);
+var address2 = SERVER_ADDRESS + "fish_cap.php?user=" + string(user);
 
 with (objAchievementFinder) {
+  show_debug_message(address2);
   get = http_get(address2);
 }

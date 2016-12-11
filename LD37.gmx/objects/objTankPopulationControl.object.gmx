@@ -70,17 +70,17 @@ alarm[normalRespawnAlarm] = normalRespawnCooldown;
             <string>/// Create new tank inhabitants because we are below minimum
 
 if(instance_number(objPlant) &lt; minPlants) {
-  show_debug_message("Below minumum plants, creating a plant.");
+ // show_debug_message("Below minumum plants, creating a plant.");
   scrCreatePlant();
 }
 
 if(instance_number(objNeutralFish) &lt; minNeutralFish) {
-  show_debug_message("Below minumum neutral fish, creating a neutral fish.");
+  //show_debug_message("Below minumum neutral fish, creating a neutral fish.");
   scrCreateNeutralFish();
 }
 
 if(instance_number(objHostileFish) &lt; minHostileFish) {
-  show_debug_message("Below minumum hostile fish, creating a hostile fish.");
+  //show_debug_message("Below minumum hostile fish, creating a hostile fish.");
   scrCreateNeutralFish();
 }
 </string>

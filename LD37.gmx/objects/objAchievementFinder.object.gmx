@@ -8,6 +8,36 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Pop up achievement toasts
+
+if (count &lt; array_length_1d(achievesEarned)) {  
+  var a = instance_create(400, 300, objAchievementToast);
+  a.which = achievesEarned[count];
+  count++;
+  alarm[0] = room_speed * 4;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="62">
       <action>
         <libid>1</libid>
@@ -28,7 +58,6 @@
             <string>///Check for high score received
 
 r_str = "null";
-
   //show_debug_message("get: " + string(get));
   //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
 if ds_map_find_value(async_load, "id") == get
@@ -43,15 +72,46 @@ if ds_map_find_value(async_load, "id") == get
     r_str = "null";
   }
 }
-//show_debug_message(string_count("Success", r_str));
-if (r_str == "Success") {
-  show_debug_message("YEAH!");
-} else {
-  //show_debug_message(r_str);
-}
 
-with (objGameOverControl) {
-  alarm[1] = room_speed;
+///Only if it's a valid return
+if (r_str != "null") {
+  
+  if (string_count("Added", r_str) &gt; 0) {
+    show_debug_message("Added Achieve!");
+  } else if (string_count("Failure", r_str) &gt; 0) {
+    show_debug_message("Failed add");
+  } else {
+  
+    //split r_str into array of strings by spaces
+    var splitBy = " "; //string to split the first string by
+    var slot = 0;
+    achievesEarned[0] = ""; //array to hold all split strings
+    var str2 = "";
+    var i;
+    for (i = 2; i &lt; (string_length(r_str)+1); i++) {
+        var currStr = string_copy(r_str, i, 1);
+        if (currStr == splitBy) {
+            achievesEarned[slot] = str2; //add this split to the array of all splits
+            slot++;
+            str2 = "";
+        } else {
+            str2 = str2 + currStr;
+            achievesEarned[slot] = str2;
+        }
+    }
+    count = 0;
+    alarm[0] = room_speed;
+  
+  
+    for (i = 0; i &lt; array_length_1d(achievesEarned); i++) {
+//      show_debug_message(string(achievesEarned[i]) + " " + string(objTextInput.text));
+      scrSendAchieve(achievesEarned[i], objTextInput.text);
+    }
+    
+    with (objGameOverControl) {
+      alarm[1] = room_speed;
+    }
+  }
 }
 </string>
           </argument>
