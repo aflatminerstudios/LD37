@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,9 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///setup variables
+            <string>//Pop up achievement toasts
 
-//get = -1;
+if (count &lt; array_length_1d(achievesEarned)) {  
+  var a = instance_create(400, 300, objAchievementToast);
+  a.which = achievesEarned[count];
+  count++;
+  alarm[0] = room_speed * 4;
+}
 </string>
           </argument>
         </arguments>
@@ -53,7 +58,6 @@
             <string>///Check for high score received
 
 r_str = "null";
-
   //show_debug_message("get: " + string(get));
   //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
 if ds_map_find_value(async_load, "id") == get
@@ -68,13 +72,44 @@ if ds_map_find_value(async_load, "id") == get
     r_str = "null";
   }
 }
-//show_debug_message(string_count("Success", r_str));
-if (r_str == "Success") {
-  show_debug_message("YEAH!");
-} else {
-  //show_debug_message(r_str);
-}
 
+///Only if it's a valid return
+if (r_str != "null") {
+  
+  if (string_count("Added", r_str) &gt; 0) {
+    show_debug_message("Added Achieve!");
+  } else if (string_count("Failure", r_str) &gt; 0) {
+    show_debug_message("Failed add");
+  } else {
+  
+    //split r_str into array of strings by spaces
+    var splitBy = " "; //string to split the first string by
+    var slot = 0;
+    achievesEarned[0] = ""; //array to hold all split strings
+    var str2 = "";
+    var i;
+    for (i = 2; i &lt; (string_length(r_str)+1); i++) {
+        var currStr = string_copy(r_str, i, 1);
+        if (currStr == splitBy) {
+            achievesEarned[slot] = str2; //add this split to the array of all splits
+            slot++;
+            str2 = "";
+        } else {
+            str2 = str2 + currStr;
+            achievesEarned[slot] = str2;
+        }
+    }
+    count = 0;
+    if (slot &gt; 1) {
+      alarm[0] = room_speed;
+    }
+  
+    for (i = 0; i &lt; array_length_1d(achievesEarned); i++) {
+      scrSendAchieve(achievesEarned[i], objTextInput.text);
+    }
+    
+  }
+}
 </string>
           </argument>
         </arguments>

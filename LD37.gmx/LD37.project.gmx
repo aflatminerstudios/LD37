@@ -35,6 +35,8 @@
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
     </sprites>
+    <sprite>sprites\sprAchievementOpen</sprite>
+    <sprite>sprites\sprAchievementClose</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -61,14 +63,18 @@
     <script>scripts\scrIsInRect.gml</script>
     <scripts name="Networking">
       <script>scripts\scrSendHighScore.gml</script>
+      <script>scripts\scrSendAchieve.gml</script>
     </scripts>
     <scripts name="Tank Population">
       <script>scripts\scrCreatePlant.gml</script>
       <script>scripts\scrCreateNeutralFish.gml</script>
     </scripts>
+    <script>scripts\scrAwardAchievement.gml</script>
+    <script>scripts\scrGetAchieveName.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontNormal</font>
+    <font>fonts\fontAchieve</font>
     <font>fonts\fontLarge</font>
   </fonts>
   <objects name="objects">
@@ -81,6 +87,7 @@
       <object>objects\objTitleInstructionsText</object>
     </objects>
     <object>objects\objGoldfish</object>
+    <object>objects\objAchievementTracker</object>
     <objects name="Fish Food">
       <object>objects\objFishFood</object>
       <object>objects\objFishFlakes</object>
@@ -95,7 +102,7 @@
       <object>objects\objHighScoreSend</object>
       <object>objects\objTextInput</object>
       <object>objects\objGameOverControl</object>
-      <object>objects\objHighScoreButton</object>
+      <object>objects\objAchievementFinder</object>
     </objects>
     <objects name="Tank Population">
       <object>objects\objTankPopulationControl</object>
@@ -114,6 +121,8 @@
       </objects>
     </objects>
     <object>objects\objPersistentObject</object>
+    <object>objects\objAchievementToast</object>
+    <object>objects\objHighScoreButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>

@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -109,7 +109,7 @@ alarm[11] = 1;
             <kind>1</kind>
             <string>/// Announce being created (DEBUG)
 
-show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being created.");
+//show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being created.");
 </string>
           </argument>
         </arguments>
@@ -133,7 +133,7 @@ show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(objec
           <argument>
             <kind>1</kind>
             <string>/// Log that the instance is being despawned
-show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being despawned.");
+//show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being despawned.");
 </string>
           </argument>
         </arguments>
@@ -163,7 +163,7 @@ isInFrontOfFish = scrIsInFrontOfFish(self.id);
 
 if(isInFrontOfFish) {
   if(isFadingOut) {
-    show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") has come back into view.");
+  //  show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") has come back into view.");
     alarm[10] = -1;
     isFadingOut = false;
     
@@ -172,7 +172,7 @@ if(isInFrontOfFish) {
     alarm[9] = timeToFadeIn;
   }
 } else if(!isFadingOut){
-  show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is beginning to fade.");
+ //// show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is beginning to fade.");
   isFadingIn = false;
   alarm[9] = -1;
   
@@ -263,7 +263,7 @@ if(waitingToAppear) {
     waitingToAppear = false;
     isFadingIn = true;
     baseAlphaValue = 0.0;
-    show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being presented.");
+    //show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being presented.");
   } else {
     image_alpha = 0.0;
   }  
