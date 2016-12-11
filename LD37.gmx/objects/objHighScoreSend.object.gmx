@@ -75,9 +75,6 @@ if (r_str == "Success") {
   //show_debug_message(r_str);
 }
 
-with (objGameOverControl) {
-  alarm[1] = room_speed;
-}
 </string>
           </argument>
         </arguments>

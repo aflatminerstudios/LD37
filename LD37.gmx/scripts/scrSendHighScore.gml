@@ -25,3 +25,12 @@ with (objAchievementFinder) {
   show_debug_message(address2);
   get = http_get(address2);
 }
+
+with (objPersistentObject) {
+  for (i = 0; i < array_length_1d(achievements); i++) {
+    scrSendAchieve(achievements[i], objTextInput.text);
+  }
+}
+with (objGameOverControl) {
+  alarm[1] = room_speed;
+}

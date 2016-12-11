@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="2" enumb="0">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,20 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Pop up achievement toasts
+            <string>///Default all achievements to false
 
-if (count &lt; array_length_1d(achievesEarned)) {  
-  var a = instance_create(400, 300, objAchievementToast);
-  a.which = achievesEarned[count];
-  count++;
-  alarm[0] = room_speed * 4;
-}
+live60s = false;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="62">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -55,59 +50,11 @@ if (count &lt; array_length_1d(achievesEarned)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Check for high score received
-
-r_str = "null";
-  //show_debug_message("get: " + string(get));
-  //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
-if ds_map_find_value(async_load, "id") == get
-{
-  //show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
-  if ds_map_find_value(async_load, "status") == 0
-  {
-    r_str = ds_map_find_value(async_load, "result");
-  }
-  else
-  {
-    r_str = "null";
-  }
-}
-
-///Only if it's a valid return
-if (r_str != "null") {
-  
-  if (string_count("Added", r_str) &gt; 0) {
-    show_debug_message("Added Achieve!");
-  } else if (string_count("Failure", r_str) &gt; 0) {
-    show_debug_message("Failed add");
-  } else {
-  
-    //split r_str into array of strings by spaces
-    var splitBy = " "; //string to split the first string by
-    var slot = 0;
-    achievesEarned[0] = ""; //array to hold all split strings
-    var str2 = "";
-    var i;
-    for (i = 2; i &lt; (string_length(r_str)+1); i++) {
-        var currStr = string_copy(r_str, i, 1);
-        if (currStr == splitBy) {
-            achievesEarned[slot] = str2; //add this split to the array of all splits
-            slot++;
-            str2 = "";
-        } else {
-            str2 = str2 + currStr;
-            achievesEarned[slot] = str2;
-        }
-    }
-    count = 0;
-    if (slot &gt; 1) {
-      alarm[0] = room_speed;
-    }
-  
-    for (i = 0; i &lt; array_length_1d(achievesEarned); i++) {
-      scrSendAchieve(achievesEarned[i], objTextInput.text);
-    }
-    
+            <string>///Check for living 60 seconds
+if (!live60s) {
+  if (objTimer.time &gt;= 10) {
+    scrAwardAchievement("live60s");
+    live60s = true;
   }
 }
 </string>
