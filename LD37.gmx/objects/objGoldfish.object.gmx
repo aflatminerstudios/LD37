@@ -274,7 +274,6 @@ if (hunger &lt; -100) {
   scrGameOver("Oh no! You ate too much!");
 } else if (hunger &gt; 100) {
   scrGameOver("Oh no! You starved to death!");
-  room_restart();
 } else if (hunger &gt; 75 &amp;&amp; sprite_index != sprGoldfishHungry) {
   var oldIndex = image_index;
   sprite_index = sprGoldfishHungry;
