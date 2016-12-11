@@ -12,7 +12,6 @@
       <sprite>sprites\sprGraybox64x64</sprite>
     </sprites>
     <sprite>sprites\sprGoldfish</sprite>
-    <sprite>sprites\sprGoldfishFull</sprite>
     <sprite>sprites\sprGoldfishHungry</sprite>
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
@@ -20,7 +19,9 @@
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
+    <sprite>sprites\sprGoldfishFull</sprite>
     <sprite>sprites\sprTallRibbonPlant</sprite>
+    <sprite>sprites\sprHighScoreButton</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -47,6 +48,10 @@
       <script>scripts\scrSendHighScore.gml</script>
     </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fontNormal</font>
+    <font>fonts\fontLarge</font>
+  </fonts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
       <object>objects\objLogoControl</object>
@@ -63,7 +68,9 @@
     <object>objects\objCatPaw</object>
     <objects name="GameOver">
       <object>objects\objHighScoreSend</object>
+      <object>objects\objTextInput</object>
       <object>objects\objGameOverControl</object>
+      <object>objects\objHighScoreButton</object>
     </objects>
     <object>objects\canDespawn</object>
     <objects name="Plants">

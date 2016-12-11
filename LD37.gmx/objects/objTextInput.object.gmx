@@ -25,62 +25,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Send high score
+            <string>///Setup variables
+cursorFlash = 0;
+cursorRate = 15;
+cursorMove = 0;
+cursorMoveRate = 7;
+text = "";
+cursorPos = 0;
+drawCursor = true;
 
-//scrSendHighScore("testUser", score);
+draw_set_font(fontNormal);
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Set up variables
+width = 36 * string_width('m') + 10;
+height = string_height('//') + 10;
 
-ready = false;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Pop up for text input?
+alarm[0] = cursorRate;
 
-//result = get_string_async("What is your username?","");
+locked = false;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="1">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -97,9 +64,10 @@ ready = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Set to ready
+            <string>///Flash cursor
+drawCursor = !drawCursor;
 
-ready = true;
+alarm[0] = cursorRate;
 </string>
           </argument>
         </arguments>
@@ -122,11 +90,61 @@ ready = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Leave if ready and button press
+            <string>///Process input
 
-if (ready &amp;&amp; (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any))) {
-  score = 0;
-  room_goto(roomTitle);
+if (!locked) {
+  //handle cursorPos movement
+  cursorMove = max(0, cursorMove - 1);
+  
+  if (keyboard_check(vk_left) != keyboard_check(vk_right)) {
+      if (cursorMove == 0) {
+          if (keyboard_check(vk_left)) {
+              if (cursorPos &gt; 0) cursorPos -= 1
+          } else {
+              if (cursorPos &lt; string_length(text)) cursorPos += 1
+          }
+          cursorMove = cursorMoveRate
+      }
+  } else {
+    cursorMove = 0
+  }
+  
+  if (keyboard_check_pressed(vk_end)) {
+    cursorPos = string_length(text);
+  }
+  if (keyboard_check_pressed(vk_home)) {
+    cursorPos = 0;
+  }
+  
+  //Delete last char
+  if (keyboard_check_pressed(vk_delete) || keyboard_check_pressed(vk_backspace)) {
+    text = string_delete(text, cursorPos, 1);
+    cursorPos -= 1;
+  }
+  
+  
+  
+  //Handle actual input
+  if (keyboard_check_pressed(vk_anykey)) {
+    k = keyboard_lastkey;
+    c = keyboard_lastchar;
+    
+    //Make sure it is printable character
+    if (keyboard_check_pressed(vk_delete) || keyboard_check_pressed(vk_home) 
+      || keyboard_check_pressed(vk_end) || keyboard_check_pressed(vk_left) 
+      || keyboard_check_pressed(vk_right) || keyboard_check_pressed(vk_backspace) ) { 
+      }
+    else if (k &gt;= 40 &amp;&amp; k &lt;= 126 &amp;&amp; string_length(text) &lt; 36) {
+      text = string_insert(string(c), text, cursorPos + 1);
+      cursorPos += 1;
+    } else if (keyboard_check_pressed(vk_enter)) {
+      locked = true;
+      scrSendHighScore(text, score);
+    }
+  }
+  
+  //Make sure cursorPos is right
+  cursorPos = max(0, min(cursorPos, string_length(text)))
 }
 </string>
           </argument>
@@ -150,28 +168,56 @@ if (ready &amp;&amp; (keyboard_check_pressed(vk_anykey) || mouse_check_button_pr
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Draw text on game over screen
+            <string>///Draw input box
 
-draw_set_color(c_maroon);
-draw_set_font(fontLarge);
-draw_set_halign(fa_center);
-
-draw_text(room_width/2, 32, "Game Over!");
-
-var name = "";
-if (objTextInput.locked) {
-  name = ", " + string(objTextInput.text);
-}
-
-draw_set_font(fontNormal);
-draw_text(room_width/2, 110, "Congratulations" + string(name) + "! You scored " + string(score) + " points.");
-
-if (!objTextInput.locked) {
+if (!locked) {
+  var color = draw_get_color();
+  
+  draw_set_color(c_white);
+  draw_rectangle(x, y, x+width, y+height, false);
   draw_set_color(c_black);
-  draw_text(room_width/2, 250, "Please input your username below and press enter or click the button");
+  draw_rectangle(x, y, x+width, y+height, true);
+  
+  draw_set_color(color);
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw text
 
-draw_set_halign(fa_left);
+if (!locked) {
+  draw_set_font(fontNormal);
+  draw_set_color(c_black);
+  draw_text(x + 5, y, text);
+  
+  //Draw cursor
+  if (drawCursor) {
+    w = string_width(string_copy(text, 1, cursorPos));
+    h = string_height('\\')
+    draw_line(x + w + 5, y, x + w + 5, y + h)
+  }
+  
+  draw_set_halign(fa_left);
+  draw_set_valign(fa_top);
+
+}
 </string>
           </argument>
         </arguments>
