@@ -32,9 +32,9 @@
 viewing = 0;
 
 framesPerScroll = 1;
-pixelsPerScroll = 10;
-parallaxPixels = 7;
-textParallaxPixels = -8;
+pixelsPerScroll = 15;
+parallaxPixels = 10;
+textParallaxPixels = -10;
 
 
 //View position for title screen
