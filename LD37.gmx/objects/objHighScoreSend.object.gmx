@@ -8,6 +8,31 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///setup variables
+
+//get = -1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="62">
       <action>
         <libid>1</libid>
@@ -25,7 +50,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///Check for high score received
+
+r_str = "null";
+
+  show_debug_message("get: " + string(get));
+  show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
+if ds_map_find_value(async_load, "id") == get
+{
+  show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
+  if ds_map_find_value(async_load, "status") == 0
+  {
+    r_str = ds_map_find_value(async_load, "result");
+  }
+  else
+  {
+    r_str = "null";
+  }
+}
+show_debug_message(string_count("Success", r_str));
+if (string_count("Success", r_str) &gt; 0) {
+  show_debug_message("YEAH!");
+} else {
+  show_debug_message(r_str);
+}
+
+with (objGameOverControl) {
+  alarm[1] = 1;
+}
+</string>
           </argument>
         </arguments>
       </action>
