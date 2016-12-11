@@ -129,6 +129,11 @@ ready = true;
 
 if (ready &amp;&amp; (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any))) {
   score = 0;
+  
+  with (objPersistentObject) {
+    instance_destroy();
+  }
+  
   room_goto(roomTitle);
 }
 </string>

@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>msg = "";
+time = 0;
+flakes = 0;
 </string>
           </argument>
         </arguments>
