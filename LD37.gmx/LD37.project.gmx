@@ -10,6 +10,7 @@
       <sprite>sprites\sprGraybox16x16</sprite>
       <sprite>sprites\sprGraybox32x32</sprite>
       <sprite>sprites\sprGraybox64x64</sprite>
+      <sprite>sprites\sprGraybox128x128</sprite>
     </sprites>
     <sprites name="Goldfish">
       <sprite>sprites\sprGoldfish</sprite>
@@ -104,6 +105,7 @@
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>
         <object>objects\objTetra</object>
+        <object>objects\objShrimp</object>
       </objects>
       <objects name="Hostile Fish">
         <object>objects\objHostileFish</object>
