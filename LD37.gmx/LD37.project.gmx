@@ -22,6 +22,8 @@
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
+      <sprite>sprites\sprTitleText</sprite>
+      <sprite>sprites\sprTitleInstructionsText</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
@@ -75,6 +77,8 @@
       <object>objects\objTitleControl</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
+      <object>objects\objTitleText</object>
+      <object>objects\objTitleInstructionsText</object>
     </objects>
     <object>objects\objGoldfish</object>
     <objects name="Fish Food">
