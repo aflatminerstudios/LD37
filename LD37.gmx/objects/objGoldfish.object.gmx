@@ -29,9 +29,9 @@
 maxForward = 2;
 maxSpeed = 5;
 
-turnSpeed = 2;
+turnSpeed = 3;
 
-numFrames = 60;
+numFrames = room_speed * 1.3;
 
 decelPct = 0.6;
 accelPct = 1 - decelPct;
@@ -78,14 +78,14 @@ image_speed = 0.5;
 hunger = 0;
 overStuffed = -100;
 starved = 100;
-full = -40;
-hungry = 15;
+full = -60;
+hungry = 60;
 
 //For decreasing hunger
-flakePower = 20;
+flakePower = 15;
 
 //For starving
-starvePower = 3;
+starvePower = 5;
 starveTime = 1; //in seconds
 alarm[0] = room_speed * starveTime;
 
