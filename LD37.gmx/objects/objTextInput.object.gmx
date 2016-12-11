@@ -30,8 +30,14 @@ cursorFlash = 0;
 cursorRate = 15;
 cursorMove = 0;
 cursorMoveRate = 7;
-text = "";
-cursorPos = 0;
+
+if (objPermanentObject.user == noone) {
+  text = "";
+  cursorPos = 0;
+} else {
+  text = objPermanentObject.user;
+  cursorPos = string_length(text);
+}
 drawCursor = true;
 
 draw_set_font(fontNormal);
@@ -139,6 +145,7 @@ if (!locked) {
       cursorPos += 1;
     } else if (keyboard_check_pressed(vk_enter) &amp;&amp; text != "") {
       locked = true;
+      objPermanentObject.user = text;
       scrSendHighScore(text, score);
     }
   }

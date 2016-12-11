@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,57 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///setup variables
+            <string>///Default all variables
 
-//get = noone;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="62">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Check for high score received
+user = noone;
+achieves = ds_map_create();
 
-r_str = "null";
+ds_map_add(achieves, "live60s", false)
+ds_map_add(achieves, "score250game", false)
+ds_map_add(achieves, "flakes15game", false)
+ds_map_add(achieves, "stareAtWall", false)
 
-if (!is_undefined(get)) {
-    //show_debug_message("get: " + string(get));
-    //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
-  if ds_map_find_value(async_load, "id") == get
-  {
-    //show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
-    if ds_map_find_value(async_load, "status") == 0
-    {
-      r_str = ds_map_find_value(async_load, "result");
-    }
-    else
-    {
-      r_str = "null";
-    }
-  }
-  //show_debug_message(string_count("Success", r_str));
-  if (r_str == "Success") {
-    show_debug_message("YEAH!");
-  } else {
-    //show_debug_message(r_str);
-  }
-}
 </string>
           </argument>
         </arguments>

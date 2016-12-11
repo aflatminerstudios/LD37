@@ -30,7 +30,7 @@
 hunger = 0;
 overStuffed = -100;
 starved = 100;
-full = -60;
+full = -50;
 hungry = 60;
 
 //For decreasing hunger

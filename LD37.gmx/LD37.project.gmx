@@ -135,6 +135,7 @@
     <object>objects\objPersistentObject</object>
     <object>objects\objAchievementToast</object>
     <object>objects\objHighScoreButton</object>
+    <object>objects\objPermanentObject</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>

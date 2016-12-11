@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="objLogoControl" x="0" y="0" name="inst_4F5E4284" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPermanentObject" x="0" y="32" name="inst_D0605707" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

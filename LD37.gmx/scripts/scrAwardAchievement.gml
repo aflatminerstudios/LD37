@@ -8,5 +8,9 @@ with (objPersistentObject) {
   numAchievements++;
 }
 
-var a = instance_create(175, 500, objAchievementToast);
-a.which = which;
+if (objPermanentObject.achieves[? which] == false) {
+  var a = instance_create(175, 500, objAchievementToast);
+  a.which = which;
+}
+
+ds_map_replace(objPermanentObject.achieves, which, true);

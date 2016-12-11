@@ -53,33 +53,6 @@ stareAtWall = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Check for living 60 seconds
-if (!live60s) {
-  if (objTimer.time &gt;= 60) {
-    scrAwardAchievement("live60s");
-    live60s = true;
-  }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///Check for 15 flakes
 if (!flakes15game) {
  if (objGameControl.flakesCollected &gt;= 15) {
@@ -153,6 +126,33 @@ if (!stareAtWall) {
     } else {
       wallStare = 0;
     }
+  }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check for living 60 seconds
+if (!live60s) {
+  if (objTimer.time &gt;= 60) {
+    scrAwardAchievement("live60s");
+    live60s = true;
   }
 }
 </string>
