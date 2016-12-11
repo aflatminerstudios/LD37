@@ -74,6 +74,10 @@ goalDir = 0;
             <string>///setup eating variables
 
 hunger = 0;
+overStuffed = -100;
+starved = 100;
+full = 75;
+hungry = -75;
 
 //For decreasing hunger
 flakePower = 20;
@@ -270,15 +274,15 @@ speed = 0;
             <kind>1</kind>
             <string>///Check hunger
 
-if (hunger &lt; -100) {
+if (hunger &lt; overStuffed) {
   scrGameOver("Oh no! You ate too much!");
-} else if (hunger &gt; 100) {
+} else if (hunger &gt; starving) {
   scrGameOver("Oh no! You starved to death!");
-} else if (hunger &gt; 75 &amp;&amp; sprite_index != sprGoldfishHungry) {
+} else if (hunger &gt; full &amp;&amp; sprite_index != sprGoldfishHungry) {
   var oldIndex = image_index;
   sprite_index = sprGoldfishHungry;
   image_index = oldIndex;
-} else if (hunger &lt; -75 &amp;&amp; sprite_index != sprGoldfishFull) {
+} else if (hunger &lt; hungry &amp;&amp; sprite_index != sprGoldfishFull) {
   var oldIndex = image_index;
   sprite_index = sprGoldfishFull;
   image_index = oldIndex;
