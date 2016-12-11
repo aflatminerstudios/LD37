@@ -54,11 +54,11 @@
 
 r_str = "null";
 
-  show_debug_message("get: " + string(get));
-  show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
+  //show_debug_message("get: " + string(get));
+  //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
 if ds_map_find_value(async_load, "id") == get
 {
-  show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
+  //show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
   if ds_map_find_value(async_load, "status") == 0
   {
     r_str = ds_map_find_value(async_load, "result");
@@ -68,11 +68,11 @@ if ds_map_find_value(async_load, "id") == get
     r_str = "null";
   }
 }
-show_debug_message(string_count("Success", r_str));
-if (string_count("Success", r_str) &gt; 0) {
+//show_debug_message(string_count("Success", r_str));
+if (r_str == "Success") {
   show_debug_message("YEAH!");
 } else {
-  show_debug_message(r_str);
+  //show_debug_message(r_str);
 }
 
 with (objGameOverControl) {

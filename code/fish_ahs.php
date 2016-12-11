@@ -4,7 +4,11 @@ include "db.php";
 
 $user = $_GET["user"];
 $score = intval($_GET["score"]);
+$other = $_GET["other"];
 
+$val = md5($user.$score.$magic);
+
+if ($other == $val) {
 
 $dbConnection = new PDO("mysql:dbname=".$db.";host=127.0.0.1;charset=utf8", $u, $p);
 
@@ -16,5 +20,7 @@ $stmt = $dbConnection->prepare('INSERT INTO '.$scoretable.' ( user, score ) VALU
 $stmt->execute(array('user' => $user, 'score' => $score));
 
 echo 'Success';
-
+} else {
+  echo 'Failure ',$other, '      ', $val;
+}
 ?>
