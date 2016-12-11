@@ -10,6 +10,7 @@
       <sprite>sprites\sprGraybox16x16</sprite>
       <sprite>sprites\sprGraybox32x32</sprite>
       <sprite>sprites\sprGraybox64x64</sprite>
+      <sprite>sprites\sprGraybox128x128</sprite>
     </sprites>
     <sprites name="Goldfish">
       <sprite>sprites\sprGoldfish</sprite>
@@ -34,6 +35,15 @@
     </sprites>
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
+      <sprites name="Shrimp">
+        <sprite>sprites\sprShrimpIdle</sprite>
+        <sprite>sprites\sprShrimpIrritated</sprite>
+        <sprite>sprites\sprShrimpWalking</sprite>
+      </sprites>
+      <sprites name="Sucker Fish">
+        <sprite>sprites\sprSuckerFishIdle</sprite>
+        <sprite>sprites\sprSuckerFishMoving</sprite>
+      </sprites>
     </sprites>
     <sprite>sprites\sprAchievementOpen</sprite>
     <sprite>sprites\sprAchievementClose</sprite>
@@ -115,6 +125,8 @@
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>
         <object>objects\objTetra</object>
+        <object>objects\objShrimp</object>
+        <object>objects\objSuckerFish</object>
       </objects>
       <objects name="Hostile Fish">
         <object>objects\objHostileFish</object>
@@ -130,8 +142,12 @@
     <room>rooms\roomTank</room>
     <room>rooms\roomGameOver</room>
   </rooms>
-  <constants number="1">
+  <constants number="5">
     <constant name="SERVER_ADDRESS">"http://www.catbirdgames.com/fish/"</constant>
+    <constant name="TOPOFTANK">130</constant>
+    <constant name="BOTTOMOFTANK">1000</constant>
+    <constant name="LEFTSIDEOFTANK">200</constant>
+    <constant name="RIGHTSIDEOFTANK">1400</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
