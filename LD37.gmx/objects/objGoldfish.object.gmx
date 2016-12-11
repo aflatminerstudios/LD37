@@ -25,54 +25,6 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///setup movement variables
-maxForward = 2;
-maxSpeed = 5;
-
-turnSpeed = 3;
-
-numFrames = room_speed * 1.3;
-
-decelPct = 0.6;
-accelPct = 1 - decelPct;
-
-accelFrames = numFrames * accelPct;
-decelFrames = numFrames - accelFrames;
-
-moveAccel = maxForward / accelFrames;
-moveDecel = maxForward / decelFrames;
-
-//Which frame of movement are we on
-curFrame = numFrames + 1;
-
-//Starts out not moving
-curForward = 0;
-
-//initial direction
-direction = 0;
-goalDir = 0;
-
-image_speed = 0.5;
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>///setup eating variables
 
 hunger = 0;
@@ -113,6 +65,54 @@ state = 0;
           <argument>
             <kind>1</kind>
             <string>///Misc. variables
+
+image_speed = 0.5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///setup movement variables
+maxForward = 2;
+maxSpeed = 5;
+
+turnSpeed = 3;
+
+numFrames = room_speed * 1.3;
+
+decelPct = 0.6;
+accelPct = 1 - decelPct;
+
+accelFrames = numFrames * accelPct;
+decelFrames = numFrames - accelFrames;
+
+moveAccel = maxForward / accelFrames;
+moveDecel = maxForward / decelFrames;
+
+//Which frame of movement are we on
+curFrame = numFrames + 1;
+
+//Starts out not moving
+curForward = 0;
+
+//initial direction
+direction = 0;
+goalDir = 0;
 
 image_speed = 0.5;
 </string>
