@@ -11,8 +11,14 @@
       <sprite>sprites\sprGraybox32x32</sprite>
       <sprite>sprites\sprGraybox64x64</sprite>
     </sprites>
-    <sprite>sprites\sprGoldfish</sprite>
-    <sprite>sprites\sprGoldfishHungry</sprite>
+    <sprites name="Goldfish">
+      <sprite>sprites\sprGoldfish</sprite>
+      <sprite>sprites\sprGoldfishMoving</sprite>
+      <sprite>sprites\sprGoldfishHungryMoving</sprite>
+      <sprite>sprites\sprGoldfishHungry</sprite>
+      <sprite>sprites\sprGoldfishFullMoving</sprite>
+      <sprite>sprites\sprGoldfishFull</sprite>
+    </sprites>
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
@@ -23,7 +29,6 @@
     <sprite>sprites\sprShortRibbonPlantGreen</sprite>
     <sprite>sprites\sprShortRibbonPlantBrown</sprite>
     <sprite>sprites\sprTallRibbonPlantBrown</sprite>
-    <sprite>sprites\sprGoldfishFull</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprite>sprites\sprTetra</sprite>
   </sprites>

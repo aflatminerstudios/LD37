@@ -7,9 +7,9 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>193</bbox_right>
-  <bbox_top>0</bbox_top>
+  <bbox_left>21</bbox_left>
+  <bbox_right>188</bbox_right>
+  <bbox_top>3</bbox_top>
   <bbox_bottom>149</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
@@ -29,5 +29,26 @@
     <frame index="6">images\sprGoldfishHungry_6.png</frame>
     <frame index="7">images\sprGoldfishHungry_7.png</frame>
     <frame index="8">images\sprGoldfishHungry_8.png</frame>
+    <frame index="9">images\sprGoldfishHungry_9.png</frame>
+    <frame index="10">images\sprGoldfishHungry_10.png</frame>
+    <frame index="11">images\sprGoldfishHungry_11.png</frame>
+    <frame index="12">images\sprGoldfishHungry_12.png</frame>
+    <frame index="13">images\sprGoldfishHungry_13.png</frame>
+    <frame index="14">images\sprGoldfishHungry_14.png</frame>
+    <frame index="15">images\sprGoldfishHungry_15.png</frame>
+    <frame index="16">images\sprGoldfishHungry_16.png</frame>
+    <frame index="17">images\sprGoldfishHungry_17.png</frame>
+    <frame index="18">images\sprGoldfishHungry_18.png</frame>
+    <frame index="19">images\sprGoldfishHungry_19.png</frame>
+    <frame index="20">images\sprGoldfishHungry_20.png</frame>
+    <frame index="21">images\sprGoldfishHungry_21.png</frame>
+    <frame index="22">images\sprGoldfishHungry_22.png</frame>
+    <frame index="23">images\sprGoldfishHungry_23.png</frame>
+    <frame index="24">images\sprGoldfishHungry_24.png</frame>
+    <frame index="25">images\sprGoldfishHungry_25.png</frame>
+    <frame index="26">images\sprGoldfishHungry_26.png</frame>
+    <frame index="27">images\sprGoldfishHungry_27.png</frame>
+    <frame index="28">images\sprGoldfishHungry_28.png</frame>
+    <frame index="29">images\sprGoldfishHungry_29.png</frame>
   </frames>
 </sprite>
