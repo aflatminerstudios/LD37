@@ -25,6 +25,7 @@
     <sprite>sprites\sprTallRibbonPlantBrown</sprite>
     <sprite>sprites\sprGoldfishFull</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
+    <sprite>sprites\sprTetra</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -95,6 +96,7 @@
         <object>objects\objHostileFish</object>
       </objects>
     </objects>
+    <object>objects\objTetra</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
