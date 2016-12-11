@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///setup variables
 
-get = noone;
+//get = noone;
 </string>
           </argument>
         </arguments>

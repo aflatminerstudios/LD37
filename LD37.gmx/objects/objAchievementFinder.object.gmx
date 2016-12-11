@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>get = noone;
+            <string>//get = noone;
 </string>
           </argument>
         </arguments>
@@ -82,10 +82,9 @@ if (count &lt; array_length_1d(achievesEarned)) {
 
 r_str = "null";
 
-if (!is_undefined(get)) {
   //show_debug_message("get: " + string(get));
   //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
-  if ds_map_find_value(async_load, "id") == get
+  //if ds_map_find_value(async_load, "id") == get
   {
     //show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
     if ds_map_find_value(async_load, "status") == 0
@@ -97,11 +96,11 @@ if (!is_undefined(get)) {
       r_str = "null";
     }
   }
-  
   ///Only if it's a valid return
   if (r_str != "null") {
-    
-    if (string_count("Added", r_str) &gt; 0) {
+    if (string_count("Success", r_str) &gt; 0) {
+      show_debug_message("YEAH!");
+    } else if (string_count("Added", r_str) &gt; 0) {
       show_debug_message("Added Achieve!");
     } else if (string_count("Failure", r_str) &gt; 0) {
       show_debug_message("Failed add");
@@ -125,6 +124,7 @@ if (!is_undefined(get)) {
           }
       }
       count = 0;
+      show_debug_message(slot);
       if (slot &gt; 1) {
         alarm[0] = room_speed;
       }
@@ -135,7 +135,7 @@ if (!is_undefined(get)) {
       
     }
   }
-}
+
 </string>
           </argument>
         </arguments>
