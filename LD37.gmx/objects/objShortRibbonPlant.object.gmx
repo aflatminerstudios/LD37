@@ -49,7 +49,7 @@ event_inherited();
             <kind>1</kind>
             <string>/// Choose a sprite 
 
-sprite_index = choose(sprTallRibbonPlantGreen, sprTallRibbonPlantGreen, sprTallRibbonPlantBrown);
+sprite_index = choose(sprShortRibbonPlantGreen, sprShortRibbonPlantGreen, sprShortRibbonPlantBrown);
 </string>
           </argument>
         </arguments>

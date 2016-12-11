@@ -57,6 +57,8 @@ alarm[10] is used for the despawn countdown/fade
 
 timeToFade = room_speed*5; // Time in stps between offscreen detection and despawn
 isFading = false;
+
+waitingToAppear = false;
 </string>
           </argument>
         </arguments>
@@ -81,6 +83,29 @@ isFading = false;
 
 despawnCheckCooldown = room_speed * 0.1;
 alarm[11] = 1;
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Announce being created (DEBUG)
+
+show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being created.");
 </string>
           </argument>
         </arguments>
@@ -170,6 +195,39 @@ alarm[11] = despawnCheckCooldown;
             <kind>1</kind>
             <string>/// Despawn the instance
 instance_destroy();
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Check if we are still waiting to be seen
+
+if(waitingToAppear) {
+
+  if(scrIsInFrontOfFish(self.id)) {
+    waitingToAppear = false;
+    show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being presented.");
+  } else {
+    image_alpha = 0.0;
+  }  
+}
 </string>
           </argument>
         </arguments>

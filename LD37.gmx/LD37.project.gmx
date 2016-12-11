@@ -20,7 +20,10 @@
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
-    <sprite>sprites\sprTallRibbonPlant</sprite>
+    <sprite>sprites\sprTallRibbonPlantGreen</sprite>
+    <sprite>sprites\sprShortRibbonPlantGreen</sprite>
+    <sprite>sprites\sprShortRibbonPlantBrown</sprite>
+    <sprite>sprites\sprTallRibbonPlantBrown</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -48,6 +51,9 @@
     <scripts name="Networking">
       <script>scripts\scrSendHighScore.gml</script>
     </scripts>
+    <scripts name="Tank Population">
+      <script>scripts\scrCreatePlant.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
@@ -67,10 +73,20 @@
       <object>objects\objHighScoreSend</object>
       <object>objects\objGameOverControl</object>
     </objects>
-    <object>objects\canDespawn</object>
-    <objects name="Plants">
-      <object>objects\objPlant</object>
-      <object>objects\objTallRibbonPlant</object>
+    <objects name="Tank Population">
+      <object>objects\objTankPopulationControl</object>
+      <object>objects\canDespawn</object>
+      <objects name="Plants">
+        <object>objects\objPlant</object>
+        <object>objects\objTallRibbonPlant</object>
+        <object>objects\objShortRibbonPlant</object>
+      </objects>
+      <objects name="Neutral Fish">
+        <object>objects\objNeutralFish</object>
+      </objects>
+      <objects name="Hostile Fish">
+        <object>objects\objHostileFish</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
