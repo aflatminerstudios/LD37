@@ -25,7 +25,6 @@
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
-    <sprite>sprites\sprGoldfishFull</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprites name="Plants">
       <sprite>sprites\sprTallRibbonPlantGreen</sprite>
