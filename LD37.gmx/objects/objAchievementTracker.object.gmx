@@ -52,7 +52,7 @@ live60s = false;
             <kind>1</kind>
             <string>///Check for living 60 seconds
 if (!live60s) {
-  if (objTimer.time &gt;= 10) {
+  if (objTimer.time &gt;= 60) {
     scrAwardAchievement("live60s");
     live60s = true;
   }
