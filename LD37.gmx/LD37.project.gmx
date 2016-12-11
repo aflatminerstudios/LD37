@@ -79,8 +79,12 @@
       <object>objects\objTitleParallax</object>
     </objects>
     <object>objects\objGoldfish</object>
-    <object>objects\objFishFlakes</object>
-    <object>objects\objFishFoodDispenser</object>
+    <objects name="Fish Food">
+      <object>objects\objFishFood</object>
+      <object>objects\objFishFlakes</object>
+      <object>objects\objFishFoodPellets</object>
+      <object>objects\objFishFoodDispenser</object>
+    </objects>
     <object>objects\objGameControl</object>
     <object>objects\objTimer</object>
     <object>objects\objBarrier</object>
