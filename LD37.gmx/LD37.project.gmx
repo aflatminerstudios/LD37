@@ -97,6 +97,7 @@
       </objects>
     </objects>
     <object>objects\objTetra</object>
+    <object>objects\objPersistentObject</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>

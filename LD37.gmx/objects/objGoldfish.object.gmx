@@ -276,7 +276,7 @@ speed = 0;
 
 if (hunger &lt; overStuffed) {
   scrGameOver("Oh no! You ate too much!");
-} else if (hunger &gt; starving) {
+} else if (hunger &gt; starved) {
   scrGameOver("Oh no! You starved to death!");
 } else if (hunger &gt; full &amp;&amp; sprite_index != sprGoldfishHungry) {
   var oldIndex = image_index;
