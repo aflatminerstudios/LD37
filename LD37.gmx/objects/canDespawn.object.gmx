@@ -130,8 +130,9 @@ show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(objec
             <string>/// Check if we are offscreen
 
 isInView = scrIsInView(self.id);
+isInFrontOfFish = scrIsInFrontOfFish(self.id);
 
-if(isInView) {
+if(isInFrontOfFish) {
   if(isFading) {
     show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") has come back into view.");
     alarm[10] = -1;
@@ -194,7 +195,7 @@ instance_destroy();
             <string>/// Fade the view
 
 if(isFading) {
-  image_alpha = (timeToFade - alarm[10])/timeToFade;
+  image_alpha = 1.0 - (timeToFade - alarm[10])/timeToFade;
 } else if(image_alpha &lt; 1.0) {
   image_alpha = 1.0;
 }
