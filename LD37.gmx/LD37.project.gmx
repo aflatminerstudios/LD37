@@ -44,6 +44,8 @@
     <script>scripts\scrFeedGoldfish.gml</script>
     <script>scripts\scrGameOver.gml</script>
     <script>scripts\scrIsInView.gml</script>
+    <script>scripts\scrIsInFrontOfFish.gml</script>
+    <script>scripts\scrIsInRect.gml</script>
     <scripts name="Networking">
       <script>scripts\scrSendHighScore.gml</script>
     </scripts>
