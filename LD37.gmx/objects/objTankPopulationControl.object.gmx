@@ -67,13 +67,21 @@ alarm[normalRespawnAlarm] = normalRespawnCooldown;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Create a new tank inhabitant because we are below minimum
-
-var newInhabitantType = choose(objPlant);
+            <string>/// Create new tank inhabitants because we are below minimum
 
 if(instance_number(objPlant) &lt; minPlants) {
   show_debug_message("Below minumum plants, creating a plant.");
   scrCreatePlant();
+}
+
+if(instance_number(objNeutralFish) &lt; minNeutralFish) {
+  show_debug_message("Below minumum neutral fish, creating a neutral fish.");
+  scrCreateNeutralFish();
+}
+
+if(instance_number(objHostileFish) &lt; minHostileFish) {
+  show_debug_message("Below minumum hostile fish, creating a hostile fish.");
+  scrCreateNeutralFish();
 }
 </string>
           </argument>
@@ -99,10 +107,20 @@ if(instance_number(objPlant) &lt; minPlants) {
             <kind>1</kind>
             <string>/// Try to create a new instance and reset the timer
 
-var newInhabitantType = choose(objPlant);
-if(instance_number(objPlant) &lt; maxPlants) {
-  scrCreatePlant();
+var newInhabitantType = choose(objPlant, objPlant, objNeutralFish, objHostileFish);
+
+if(newInhabitantType == objPlant) {
+  if(instance_number(objPlant) &lt; maxPlants) {
+    scrCreatePlant();
+  }
+} else if(newInhabitantType == objNeutralFish) {
+  if(instance_number(objNeutralFish) &lt; maxNeutralFish) {
+    scrCreateNeutralFish();
+  }
+} else if(newInhabitantType == objHostileFish) {
+  
 }
+
 alarm[normalRespawnAlarm] = normalRespawnCooldown;
 </string>
           </argument>
