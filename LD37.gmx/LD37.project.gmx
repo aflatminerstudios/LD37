@@ -10,7 +10,6 @@
       <sprite>sprites\sprGraybox16x16</sprite>
       <sprite>sprites\sprGraybox32x32</sprite>
       <sprite>sprites\sprGraybox64x64</sprite>
-      <sprite>sprites\sprGraybox128x128</sprite>
     </sprites>
     <sprites name="Goldfish">
       <sprite>sprites\sprGoldfish</sprite>
@@ -23,6 +22,8 @@
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
+      <sprite>sprites\sprTitleText</sprite>
+      <sprite>sprites\sprTitleInstructionsText</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
@@ -33,19 +34,11 @@
     </sprites>
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
-      <sprites name="Shrimp">
-        <sprite>sprites\sprShrimpIdle</sprite>
-        <sprite>sprites\sprShrimpWalking</sprite>
-        <sprite>sprites\sprShrimpIrritated</sprite>
-      </sprites>
-      <sprites name="Sucker Fish">
-        <sprite>sprites\sprSuckerFishIdle</sprite>
-        <sprite>sprites\sprSuckerFishMoving</sprite>
-      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
+    <background>background\bgGrid</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
   </backgrounds>
@@ -84,6 +77,8 @@
       <object>objects\objTitleControl</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
+      <object>objects\objTitleText</object>
+      <object>objects\objTitleInstructionsText</object>
     </objects>
     <object>objects\objGoldfish</object>
     <objects name="Fish Food">
@@ -113,8 +108,6 @@
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>
         <object>objects\objTetra</object>
-        <object>objects\objShrimp</object>
-        <object>objects\objSuckerFish</object>
       </objects>
       <objects name="Hostile Fish">
         <object>objects\objHostileFish</object>
@@ -128,12 +121,8 @@
     <room>rooms\roomTank</room>
     <room>rooms\roomGameOver</room>
   </rooms>
-  <constants number="5">
+  <constants number="1">
     <constant name="SERVER_ADDRESS">"http://www.catbirdgames.com/fish/"</constant>
-    <constant name="TOPOFTANK">130</constant>
-    <constant name="BOTTOMOFTANK">1000</constant>
-    <constant name="LEFTSIDEOFTANK">200</constant>
-    <constant name="RIGHTSIDEOFTANK">1400</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
