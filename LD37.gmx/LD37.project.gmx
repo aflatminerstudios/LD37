@@ -19,8 +19,11 @@
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
+    <sprite>sprites\sprTallRibbonPlantGreen</sprite>
+    <sprite>sprites\sprShortRibbonPlantGreen</sprite>
+    <sprite>sprites\sprShortRibbonPlantBrown</sprite>
+    <sprite>sprites\sprTallRibbonPlantBrown</sprite>
     <sprite>sprites\sprGoldfishFull</sprite>
-    <sprite>sprites\sprTallRibbonPlant</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprite>sprites\sprTetra</sprite>
   </sprites>
@@ -50,6 +53,9 @@
     <scripts name="Networking">
       <script>scripts\scrSendHighScore.gml</script>
     </scripts>
+    <scripts name="Tank Population">
+      <script>scripts\scrCreatePlant.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontNormal</font>
@@ -75,10 +81,20 @@
       <object>objects\objGameOverControl</object>
       <object>objects\objHighScoreButton</object>
     </objects>
-    <object>objects\canDespawn</object>
-    <objects name="Plants">
-      <object>objects\objPlant</object>
-      <object>objects\objTallRibbonPlant</object>
+    <objects name="Tank Population">
+      <object>objects\objTankPopulationControl</object>
+      <object>objects\canDespawn</object>
+      <objects name="Plants">
+        <object>objects\objPlant</object>
+        <object>objects\objTallRibbonPlant</object>
+        <object>objects\objShortRibbonPlant</object>
+      </objects>
+      <objects name="Neutral Fish">
+        <object>objects\objNeutralFish</object>
+      </objects>
+      <objects name="Hostile Fish">
+        <object>objects\objHostileFish</object>
+      </objects>
     </objects>
     <object>objects\objTetra</object>
   </objects>
