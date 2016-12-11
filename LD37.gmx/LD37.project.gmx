@@ -45,6 +45,9 @@
     <script>scripts\scrIsInView.gml</script>
     <script>scripts\scrIsInFrontOfFish.gml</script>
     <script>scripts\scrIsInRect.gml</script>
+    <scripts name="Networking">
+      <script>scripts\scrSendHighScore.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
@@ -60,6 +63,10 @@
     <object>objects\objTimer</object>
     <object>objects\objBarrier</object>
     <object>objects\objCatPaw</object>
+    <objects name="GameOver">
+      <object>objects\objHighScoreSend</object>
+      <object>objects\objGameOverControl</object>
+    </objects>
     <object>objects\canDespawn</object>
     <objects name="Plants">
       <object>objects\objPlant</object>
@@ -70,7 +77,11 @@
     <room>rooms\roomLogo</room>
     <room>rooms\roomTitle</room>
     <room>rooms\roomTank</room>
+    <room>rooms\roomGameOver</room>
   </rooms>
+  <constants number="1">
+    <constant name="SERVER_ADDRESS">"http://www.catbirdgames.com/fish/"</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
