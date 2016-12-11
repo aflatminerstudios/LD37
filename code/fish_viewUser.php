@@ -26,25 +26,28 @@ echo '<hr><br>';
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
     
 if ($result['totaltime15min'] == true) {
-	echo 'Dedicated - spend 15 minutes total in-game<br>';
+	echo 'Dedicated - Spend 15 minutes total in-game<br>';
 }
 if ($result['totalgames20'] == true) {
-	echo 'Experienced - play 20 games<br>';
+	echo 'Persistent - Died 20 times<br>';
 }
 if ($result['eat35flakes'] == true) {
-	echo 'Gourmand - eat 35 pieces of food<br>';
+	echo 'Gourmand - Eat 35 pieces of food<br>';
 }
 if ($result['totalScore1000'] == true) {
-	echo 'High Roller - score 100 total points<br>';
+	echo 'High Roller - Score 100 total points<br>';
 }
 if ($result['live60s'] == true) {
-	echo 'Survivor - survive for 60 seconds in one game<br>';
+	echo 'Survivor - Survive for 60 seconds in one game<br>';
 }
 if ($result['flakes15game'] == true) {
-	echo 'Glutton - eat 15 flakes in one game<br>';
+	echo 'Glutton - Eat 15 flakes in one game<br>';
 }
 if ($result['score250game'] == true) {
 	echo 'Lebron - Score 250 points in one game<br>';
+}
+if ($result['stareAtWall'] == true) {
+	echo 'Nietzsche - You gazed too long at the outside world. And it gazed back.<br>';
 }
 
 
