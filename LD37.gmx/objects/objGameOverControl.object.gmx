@@ -52,6 +52,9 @@
             <string>///Set up variables
 
 ready = false;
+
+message = objPersistentObject.msg;
+
 </string>
           </argument>
         </arguments>
@@ -165,6 +168,8 @@ if (objTextInput.locked) {
 
 draw_set_font(fontNormal);
 draw_text(room_width/2, 110, "Congratulations" + string(name) + "! You scored " + string(score) + " points.");
+
+draw_text(room_width/2, 160, message);
 
 if (!objTextInput.locked) {
   draw_set_color(c_black);

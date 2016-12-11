@@ -1,11 +1,13 @@
-///scrGameOver(msg)
+///scrGameOver(message)
 
-var msg = argument0;
+var message = argument0;
 
 score += objTimer.time;
 
+with (objPersistentObject) {
+  msg = message;
+}
 
-
-show_message(msg + "\n You scored " + string(score) + " points!");
+//show_message(msg + "\n You scored " + string(score) + " points!");
 
 room_goto(roomGameOver);

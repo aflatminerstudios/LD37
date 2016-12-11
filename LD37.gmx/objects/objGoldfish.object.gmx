@@ -29,9 +29,9 @@
 maxForward = 2;
 maxSpeed = 5;
 
-turnSpeed = 2;
+turnSpeed = 3;
 
-numFrames = 60;
+numFrames = room_speed * 1.3;
 
 decelPct = 0.6;
 accelPct = 1 - decelPct;
@@ -51,6 +51,8 @@ curForward = 0;
 //initial direction
 direction = 0;
 goalDir = 0;
+
+image_speed = 0.5;
 </string>
           </argument>
         </arguments>
@@ -74,14 +76,22 @@ goalDir = 0;
             <string>///setup eating variables
 
 hunger = 0;
+overStuffed = -100;
+starved = 100;
+full = -60;
+hungry = 60;
 
 //For decreasing hunger
-flakePower = 20;
+flakePower = 15;
 
 //For starving
-starvePower = 3;
+starvePower = 5;
 starveTime = 1; //in seconds
 alarm[0] = room_speed * starveTime;
+
+
+//-1 is full, 1 is hungry, 0 is normal
+state = 0;
 </string>
           </argument>
         </arguments>
@@ -270,23 +280,23 @@ speed = 0;
             <kind>1</kind>
             <string>///Check hunger
 
-if (hunger &lt; -100) {
+if (hunger &lt; overStuffed) {
   scrGameOver("Oh no! You ate too much!");
-} else if (hunger &gt; 100) {
+} else if (hunger &gt; starved) {
   scrGameOver("Oh no! You starved to death!");
-} else if (hunger &gt; 75 &amp;&amp; sprite_index != sprGoldfishHungry) {
-  var oldIndex = image_index;
-  sprite_index = sprGoldfishHungry;
-  image_index = oldIndex;
-} else if (hunger &lt; -75 &amp;&amp; sprite_index != sprGoldfishFull) {
-  var oldIndex = image_index;
-  sprite_index = sprGoldfishFull;
-  image_index = oldIndex;
-} else if (sprite_index != sprGoldfish) {
-  var oldIndex = image_index;
-  sprite_index = sprGoldfish;
-  image_index = oldIndex;
+} else if (hunger &lt; full) {
+  if (state != -1) {
+    state = -1;
+  }
+} else if (hunger &gt; hungry) {
+  if (state != 1) {
+    state = 1;
+  }
+} else if (state != 0) {
+  state = 0;
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -312,6 +322,66 @@ if (hunger &lt; -100) {
 if (place_meeting(x, y, objCatPaw)) {
   scrGameOver("The cat ate you! You lose!");
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Manage sprites
+
+if (curForward &lt;= 0) {
+  if (state == -1) {
+    if (sprite_index != sprGoldfishFull) {
+ //   var oldIndex = image_index;
+      sprite_index = sprGoldfishFull;
+//    image_index = oldIndex;  
+    }
+  } else if (state == 1) {
+    if (sprite_index != sprGoldfishHungry) {
+//    var oldIndex = image_index;
+      sprite_index = sprGoldfishHungry;
+//    image_index = oldIndex;  
+    }
+  } else if (sprite_index != sprGoldfish) {
+//    var oldIndex = image_index;
+    sprite_index = sprGoldfish;
+//    image_index = oldIndex;  
+  }
+} else {
+  if (state == -1) {
+    if (sprite_index != sprGoldfishFullMoving) {
+ //   var oldIndex = image_index;
+      sprite_index = sprGoldfishFullMoving;
+//    image_index = oldIndex;  
+    }
+  } else if (state == 1) {
+    if (sprite_index != sprGoldfishHungryMoving) {
+//    var oldIndex = image_index;
+      sprite_index = sprGoldfishHungryMoving;
+//    image_index = oldIndex;  
+    }
+  } else if (sprite_index != sprGoldfishMoving) {
+//    var oldIndex = image_index;
+    sprite_index = sprGoldfishMoving;
+//    image_index = oldIndex;  
+  }
+}
+
 </string>
           </argument>
         </arguments>

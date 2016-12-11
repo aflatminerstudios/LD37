@@ -11,8 +11,14 @@
       <sprite>sprites\sprGraybox32x32</sprite>
       <sprite>sprites\sprGraybox64x64</sprite>
     </sprites>
-    <sprite>sprites\sprGoldfish</sprite>
-    <sprite>sprites\sprGoldfishHungry</sprite>
+    <sprites name="Goldfish">
+      <sprite>sprites\sprGoldfish</sprite>
+      <sprite>sprites\sprGoldfishMoving</sprite>
+      <sprite>sprites\sprGoldfishHungryMoving</sprite>
+      <sprite>sprites\sprGoldfishHungry</sprite>
+      <sprite>sprites\sprGoldfishFullMoving</sprite>
+      <sprite>sprites\sprGoldfishFull</sprite>
+    </sprites>
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
@@ -102,6 +108,7 @@
         <object>objects\objHostileFish</object>
       </objects>
     </objects>
+    <object>objects\objPersistentObject</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
