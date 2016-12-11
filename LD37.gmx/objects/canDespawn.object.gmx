@@ -55,8 +55,12 @@ alarm[10] is used for the despawn countdown/fade
             <kind>1</kind>
             <string>/// Instance variables
 
-timeToFade = room_speed*5; // Time in stps between offscreen detection and despawn
-isFading = false;
+baseAlphaValue = 1.0;
+timeToFadeOut = room_speed*5; // Time in steps between offscreen detection and despawn
+isFadingOut = false;
+
+timeToFadeIn = room_speed*0.2; // Time in steps between sight and full alpha
+isFadingIn = false;
 
 waitingToAppear = false;
 </string>
@@ -158,15 +162,23 @@ isInView = scrIsInView(self.id);
 isInFrontOfFish = scrIsInFrontOfFish(self.id);
 
 if(isInFrontOfFish) {
-  if(isFading) {
+  if(isFadingOut) {
     show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") has come back into view.");
     alarm[10] = -1;
-    isFading = false;
+    isFadingOut = false;
+    
+    baseAlphaValue = image_alpha;
+    isFadingIn = true;
+    alarm[9] = timeToFadeIn;
   }
-} else if(!isFading){
+} else if(!isFadingOut){
   show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is beginning to fade.");
-  alarm[10] = timeToFade;
-  isFading = true;
+  isFadingIn = false;
+  alarm[9] = -1;
+  
+  alarm[10] = timeToFadeOut;
+  isFadingOut = true;
+  baseAlphaValue = image_alpha;
 } 
 
 // Reschedule offscreen detection check
@@ -200,6 +212,32 @@ instance_destroy();
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="9">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Fade in is complete
+
+baseAlphaValue = 1.0;
+isFadingIn = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
@@ -223,6 +261,8 @@ if(waitingToAppear) {
 
   if(scrIsInFrontOfFish(self.id)) {
     waitingToAppear = false;
+    isFadingIn = true;
+    baseAlphaValue = 0.0;
     show_debug_message("Instance #" + string(self.id) + " (" + object_get_name(object_index) + ") is being presented.");
   } else {
     image_alpha = 0.0;
@@ -250,10 +290,12 @@ if(waitingToAppear) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Fade the view
+            <string>/// Fade the view out/in
 
-if(isFading) {
-  image_alpha = 1.0 - (timeToFade - alarm[10])/timeToFade;
+if(isFadingOut) {
+  image_alpha = lerp(baseAlphaValue, 0.0, (timeToFadeOut - alarm[10])/timeToFadeOut);
+} else if(isFadingIn) {
+  image_alpha = lerp(baseAlphaValue, 1.0, (timeToFadeIn - alarm[9])/timeToFadeIn);
 } else if(image_alpha &lt; 1.0) {
   image_alpha = 1.0;
 }

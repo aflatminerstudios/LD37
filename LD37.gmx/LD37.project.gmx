@@ -19,13 +19,17 @@
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
-    <sprite>sprites\sprTallRibbonPlantGreen</sprite>
-    <sprite>sprites\sprShortRibbonPlantGreen</sprite>
-    <sprite>sprites\sprShortRibbonPlantBrown</sprite>
-    <sprite>sprites\sprTallRibbonPlantBrown</sprite>
     <sprite>sprites\sprGoldfishFull</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
-    <sprite>sprites\sprTetra</sprite>
+    <sprites name="Plants">
+      <sprite>sprites\sprTallRibbonPlantGreen</sprite>
+      <sprite>sprites\sprTallRibbonPlantBrown</sprite>
+      <sprite>sprites\sprShortRibbonPlantGreen</sprite>
+      <sprite>sprites\sprShortRibbonPlantBrown</sprite>
+    </sprites>
+    <sprites name="Neutral Fish">
+      <sprite>sprites\sprTetra</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -55,6 +59,7 @@
     </scripts>
     <scripts name="Tank Population">
       <script>scripts\scrCreatePlant.gml</script>
+      <script>scripts\scrCreateNeutralFish.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -91,12 +96,12 @@
       </objects>
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>
+        <object>objects\objTetra</object>
       </objects>
       <objects name="Hostile Fish">
         <object>objects\objHostileFish</object>
       </objects>
     </objects>
-    <object>objects\objTetra</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
