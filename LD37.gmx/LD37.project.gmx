@@ -22,15 +22,15 @@
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
+      <sprite>sprites\sprTitleText</sprite>
+      <sprite>sprites\sprTitleInstructionsText</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprites name="Plants">
-      <sprite>sprites\sprTallRibbonPlantGreen</sprite>
-      <sprite>sprites\sprTallRibbonPlantBrown</sprite>
-      <sprite>sprites\sprShortRibbonPlantGreen</sprite>
-      <sprite>sprites\sprShortRibbonPlantBrown</sprite>
+      <sprite>sprites\sprTallPlantForeground</sprite>
+      <sprite>sprites\sprTallPlantBackground</sprite>
     </sprites>
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
@@ -83,11 +83,17 @@
       <object>objects\objTitleControl</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
+      <object>objects\objTitleText</object>
+      <object>objects\objTitleInstructionsText</object>
     </objects>
     <object>objects\objGoldfish</object>
-    <object>objects\objFishFlakes</object>
-    <object>objects\objFishFoodDispenser</object>
     <object>objects\objAchievementTracker</object>
+    <objects name="Fish Food">
+      <object>objects\objFishFood</object>
+      <object>objects\objFishFlakes</object>
+      <object>objects\objFishFoodPellets</object>
+      <object>objects\objFishFoodDispenser</object>
+    </objects>
     <object>objects\objGameControl</object>
     <object>objects\objTimer</object>
     <object>objects\objBarrier</object>
@@ -103,8 +109,8 @@
       <object>objects\canDespawn</object>
       <objects name="Plants">
         <object>objects\objPlant</object>
-        <object>objects\objTallRibbonPlant</object>
-        <object>objects\objShortRibbonPlant</object>
+        <object>objects\objTallPlantForeground</object>
+        <object>objects\objTallPlantBackground</object>
       </objects>
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>

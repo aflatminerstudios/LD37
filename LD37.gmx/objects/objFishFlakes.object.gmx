@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>objFishFood</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -55,8 +55,12 @@ timer = 0;
             <kind>1</kind>
             <string>/// Update position
 
-y = y + fallSpeed;
-x = x + random_range(-wobbleWidth/2, wobbleWidth/2);
+var bottomOfTankY = room_height - 200
+
+if(y &lt; bottomOfTankY) {
+  y = y + fallSpeed;
+  x = x + random_range(-wobbleWidth/2, wobbleWidth/2);
+}
 </string>
           </argument>
         </arguments>

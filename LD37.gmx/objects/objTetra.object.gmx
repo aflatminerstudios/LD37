@@ -71,6 +71,34 @@ alarm[0] = round(random_range(burstMin, burstMax));
 slowdown = false;
 slowdownTime = 1.5;
 slowSpeed = 1.5;
+
+feedingCooldownTime = room_speed*0.25
+justFed = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Allow feeding again
+
+justFed = false;
 </string>
           </argument>
         </arguments>
@@ -196,9 +224,9 @@ event_inherited();
             <string>///Get new target
 
 if (curTarget == noone || !instance_exists(curTarget)) {
-  var num = instance_number(objFishFlakes);
+  var num = instance_number(objFishFood);
   if (num &gt; 0) {
-    curTarget = instance_find(objFishFlakes, irandom(num));
+    curTarget = instance_find(objFishFood, irandom(num));
   } else {
     curTarget = objGoldfish;
     alarm[1] = random(5) * room_speed;
@@ -315,7 +343,7 @@ if (place_meeting(x, y, objCatPaw)) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objFishFlakes">
+    <event eventtype="4" ename="objFishFood">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -332,14 +360,19 @@ if (place_meeting(x, y, objCatPaw)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///"Eat" fish flake
+            <string>///"Eat" fish flake if we haven't just eaten
 
-with (other) {
-  instance_destroy();
+if(!justFed) {
+  with (other) {
+    instance_destroy();
+  }
+  
+  justFed = true;
+  alarm[3] = feedingCooldownTime;
+  
+  slowdown = true;
+  alarm[2] = room_speed * slowdownTime;
 }
-
-slowdown = true;
-alarm[2] = room_speed * slowdownTime;
 </string>
           </argument>
         </arguments>
