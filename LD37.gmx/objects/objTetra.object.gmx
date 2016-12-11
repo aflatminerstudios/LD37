@@ -71,6 +71,34 @@ alarm[0] = round(random_range(burstMin, burstMax));
 slowdown = false;
 slowdownTime = 1.5;
 slowSpeed = 1.5;
+
+feedingCooldownTime = room_speed*0.25
+justFed = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Allow feeding again
+
+justFed = false;
 </string>
           </argument>
         </arguments>
@@ -308,14 +336,19 @@ if (curTarget != noone &amp;&amp; instance_exists(curTarget)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///"Eat" fish flake
+            <string>///"Eat" fish flake if we haven't just eaten
 
-with (other) {
-  instance_destroy();
+if(!justFed) {
+  with (other) {
+    instance_destroy();
+  }
+  
+  justFed = true;
+  alarm[3] = feedingCooldownTime;
+  
+  slowdown = true;
+  alarm[2] = room_speed * slowdownTime;
 }
-
-slowdown = true;
-alarm[2] = room_speed * slowdownTime;
 </string>
           </argument>
         </arguments>
