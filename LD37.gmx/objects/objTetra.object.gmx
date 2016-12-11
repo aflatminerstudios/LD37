@@ -196,9 +196,9 @@ event_inherited();
             <string>///Get new target
 
 if (curTarget == noone || !instance_exists(curTarget)) {
-  var num = instance_number(objFishFlakes);
+  var num = instance_number(objFishFood);
   if (num &gt; 0) {
-    curTarget = instance_find(objFishFlakes, irandom(num));
+    curTarget = instance_find(objFishFood, irandom(num));
   } else {
     curTarget = objGoldfish;
     alarm[1] = random(5) * room_speed;
@@ -291,7 +291,7 @@ if (curTarget != noone &amp;&amp; instance_exists(curTarget)) {
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objFishFlakes">
+    <event eventtype="4" ename="objFishFood">
       <action>
         <libid>1</libid>
         <id>603</id>
