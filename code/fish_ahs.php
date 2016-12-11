@@ -22,6 +22,18 @@ $stmt = $dbConnection->prepare('INSERT INTO '.$scoretable.' ( user, score, flake
 
 $stmt->execute(array('user' => $user, 'score' => $score, 'flakes' => $flakes, 'time' => $time));
 
+$achieves = $dbConnection->prepare('SELECT COUNT(id) as countUsers FROM '.$achievetable.' WHERE user = :user');
+$achieves->execute(array('user' => $user));
+
+$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+if ($result['countUsers'] == 0) {
+	$achieveadd = $dbConnection->prepare('INSERT INTO '.$achievetable.' (user) VALUES (:user)');
+	$achieveadd->execute(array('user' => $user));
+}
+
+
+
 echo 'Success';
 } else {
   echo 'Failure ';

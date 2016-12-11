@@ -66,6 +66,7 @@
       <script>scripts\scrCreatePlant.gml</script>
       <script>scripts\scrCreateNeutralFish.gml</script>
     </scripts>
+    <script>scripts\scrAwardAchievement.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontNormal</font>
@@ -89,6 +90,7 @@
       <object>objects\objHighScoreSend</object>
       <object>objects\objTextInput</object>
       <object>objects\objGameOverControl</object>
+      <object>objects\objAchievementFinder</object>
       <object>objects\objHighScoreButton</object>
     </objects>
     <objects name="Tank Population">
