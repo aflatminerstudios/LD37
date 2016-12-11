@@ -40,6 +40,12 @@ if ($result['totalScore1000'] == true) {
 if ($result['live60s'] == true) {
 	echo 'Survivor - survive for 60 seconds in one game<br>';
 }
+if ($result['flakes15game'] == true) {
+	echo 'Glutton - eat 15 flakes in one game<br>';
+}
+if ($result['score250game'] == true) {
+	echo 'Lebron - Score 250 points in one game<br>';
+}
 
 
 ?>
