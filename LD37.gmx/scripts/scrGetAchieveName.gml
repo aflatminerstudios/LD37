@@ -10,7 +10,11 @@ if (which == "eat35flakes") {
 } else if (which == "totaltime15min") {
   return "Dedicated";
 } else if (which == "live60s") {
-  return "Survivor!"
+  return "Survivor"
+} else if (which == "flakes15game") {
+  return "Glutton";
+} else if (which = "score250game") {
+  return "Lebron";
 }
 
 return "";
