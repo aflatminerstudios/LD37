@@ -81,6 +81,7 @@ path_start(pathPaw, 5, path_action_stop, false);
             <string>///Check for path end
 
 if (path_position == 1) {
+  scrHideCatInBackground(false);
   instance_destroy();
 } 
 </string>

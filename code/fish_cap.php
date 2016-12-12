@@ -9,7 +9,7 @@ $dbConnection = new PDO("mysql:dbname=".$db.";host=127.0.0.1;charset=utf8", $u, 
 $dbConnection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-$stmt = $dbConnection->prepare("SELECT SUM(score) as totalScore, SUM(flakesEaten) as totalFlakes, SUM(timeInMS) as sumTime, COUNT(scoreID) as numGames, SUM(objectsDisappeared) as totalDisappeared, SUM(otherFlakesEaten) as totalOtherFlakes FROM ".$scoretable." WHERE user=:user");
+$stmt = $dbConnection->prepare("SELECT SUM(score) as totalScore, SUM(flakesEaten) as totalFlakes, SUM(timeInMS) as sumTime, COUNT(scoreID) as numGames, SUM(objectsDisappeared) as totalDisappeared, SUM(otherFlakesEaten) as totalOtherFlakes, SUM(betaDeath) as betas FROM ".$scoretable." WHERE user=:user");
 
 $stmt->execute(array('user' => $user));
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -18,8 +18,9 @@ $totalScore = $result['totalScore'];
 $totalFlakes = $result['totalFlakes'];
 $sumTime = $result['sumTime'];
 $numGames = $result['numGames'];
-$totalDisappeared = $result['objectsDisappeared'];
-$totalOtherFlakes = $result['otherFlakesEaten'];
+$totalDisappeared = $result['totalDisappeared'];
+$totalOtherFlakes = $result['totalOtherFlakes'];
+$totalBetaDeath = $result['betas'];
 
 $stmt2 = $dbConnection->prepare("SELECT * FROM ".$achievetable." WHERE user=:user");
 
@@ -42,9 +43,9 @@ if ($list['totalScore1000'] == false && $totalScore >= 1000) {
 	echo "totalScore1000 ";
 }
 
-if ($list['totaltime15Min'] == false && $sumTime >= (15 * 60 * 1000)) {
-	$list['totaltime15Min'] == true;
-	echo "totaltime15Min ";
+if ($list['totaltime15min'] == false && $sumTime >= (15 * 60 * 1000)) {
+	$list['totaltime15min'] == true;
+	echo "totaltime15min ";
 }
 
 if ($list['shareFood'] == false && $totalOtherFlakes >= 50) {
@@ -55,5 +56,10 @@ if ($list['shareFood'] == false && $totalOtherFlakes >= 50) {
 if ($list['memoryLoss'] == false && $totalDisappeared >= 50) {
 	$list['memoryLoss'] == true;
 	echo "memoryLoss ";
+}
+
+if ($list['kungfu'] == false && $totalBetaDeath >= 5) {
+	$list['kungfu'] == true;
+	echo "kungfu ";
 }
 ?>

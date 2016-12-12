@@ -27,6 +27,7 @@
       <sprite>sprites\sprTitleInstructionsText</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
+    <sprite>sprites\sprBarrierSeeThrough</sprite>
     <sprite>sprites\sprCatPaw</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprite>sprites\sprCancelButton</sprite>
@@ -46,17 +47,34 @@
         <sprite>sprites\sprSuckerFishMoving</sprite>
       </sprites>
     </sprites>
+    <sprites name="Hostile Fish">
+      <sprite>sprites\sprVampireCrabBackground</sprite>
+      <sprite>sprites\sprVampireCrabClaw</sprite>
+      <sprite>sprites\sprVampireCrabClawIdle</sprite>
+      <sprite>sprites\sprVampireCrabForeground</sprite>
+    </sprites>
     <sprite>sprites\sprAchievementOpen</sprite>
     <sprite>sprites\sprAchievementClose</sprite>
-    <sprite>sprites\sprFishPellet</sprite>
-    <sprite>sprites\sprFishFlake1</sprite>
-    <sprite>sprites\sprFishFlake2</sprite>
-    <sprite>sprites\sprFishFlake3</sprite>
-    <sprite>sprites\sprFishFlake4</sprite>
+    <sprites name="Fish Food">
+      <sprite>sprites\sprFishPellet</sprite>
+      <sprite>sprites\sprFishFlake1</sprite>
+      <sprite>sprites\sprFishFlake2</sprite>
+      <sprite>sprites\sprFishFlake3</sprite>
+      <sprite>sprites\sprFishFlake4</sprite>
+    </sprites>
+    <sprite>sprites\sprFilterTube</sprite>
+    <sprite>sprites\sprBubble</sprite>
+    <sprites name="Hostile Fish">
+      <sprite>sprites\sprBetaAngry</sprite>
+      <sprite>sprites\sprBetaIdle</sprite>
+    </sprites>
+    <sprite>sprites\sprSmallBubble</sprite>
+    <sprite>sprites\sprSmallestBubble</sprite>
+    <sprite>sprites\sprDeadGoldfish</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
-    <background>background\bgGrid</background>
+    <background>background\bgBehindTankNoCat</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
   </backgrounds>
@@ -88,6 +106,7 @@
     </scripts>
     <script>scripts\scrAwardAchievement.gml</script>
     <script>scripts\scrGetAchieveName.gml</script>
+    <script>scripts\scrHideCatInBackground.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontNormal</font>
@@ -136,15 +155,20 @@
         <object>objects\objSuckerFish</object>
       </objects>
       <objects name="Hostile Fish">
-        <object>objects\objBettaFish</object>
         <object>objects\objHostileFish</object>
+        <object>objects\objBettaFish</object>
+        <object>objects\objVampireCrab</object>
       </objects>
     </objects>
     <object>objects\objPersistentObject</object>
     <object>objects\objAchievementToast</object>
     <object>objects\objHighScoreButton</object>
     <object>objects\objPermanentObject</object>
+    <object>objects\objBubble</object>
+    <object>objects\objFilterBubbles</object>
     <object>objects\objCancelButton</object>
+    <object>objects\objDeadGoldfish</object>
+    <object>objects\objFilterTube</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
@@ -155,9 +179,9 @@
   <constants number="5">
     <constant name="SERVER_ADDRESS">"http://www.catbirdgames.com/fish/"</constant>
     <constant name="TOPOFTANK">130</constant>
-    <constant name="BOTTOMOFTANK">1000</constant>
+    <constant name="BOTTOMOFTANK">1150</constant>
     <constant name="LEFTSIDEOFTANK">200</constant>
-    <constant name="RIGHTSIDEOFTANK">1400</constant>
+    <constant name="RIGHTSIDEOFTANK">1800</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
