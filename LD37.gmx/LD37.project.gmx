@@ -57,6 +57,10 @@
     </sprites>
     <sprite>sprites\sprFilterTube</sprite>
     <sprite>sprites\sprBubble</sprite>
+    <sprites name="Hostile Fish">
+      <sprite>sprites\sprBetaAngry</sprite>
+      <sprite>sprites\sprBetaIdle</sprite>
+    </sprites>
     <sprite>sprites\sprSmallBubble</sprite>
     <sprite>sprites\sprSmallestBubble</sprite>
   </sprites>
