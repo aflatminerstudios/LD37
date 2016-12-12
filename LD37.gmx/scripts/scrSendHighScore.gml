@@ -7,7 +7,7 @@ var hash = md5_string_utf8(string(user) + string(s) + "AFlatMinerSecuritySucks98
 var f = objPersistentObject.flakes;
 var t = (objPersistentObject.time * 1000) / room_speed;
 var d = objPersistentObject.disappeared;
-var o = objectPersistentObject.otherFlakes;
+var o = objPersistentObject.otherFlakes;
 
 var address = SERVER_ADDRESS + "fish_ahs.php?user=" + string(user) + "&score=" + string(s) + "&other=" + string(hash) + "&flakes=" + string(f) + "&time=" + string(t) + "&dis=" + string(d) + "&oflakes=" + string(o);
 

@@ -223,7 +223,8 @@ if (!exploreCorners) {
   if (!exploreCornersTopLeft) {
     with (objGoldfish) {
       if (x &lt; 200 &amp;&amp; y &lt; 200) {
-        exploreCornersTopLeft = true;
+        other.exploreCornersTopLeft = true;
+        show_debug_message("top left");
       }
     }
   }
@@ -231,7 +232,8 @@ if (!exploreCorners) {
   if (!exploreCornersTopRight) {
     with (objGoldfish) {
       if (x &gt; room_width - 200 &amp;&amp; y &lt; 200) {
-        exploreCornersTopRight = true;
+        other.exploreCornersTopRight = true;
+                show_debug_message("top right");
       }
     }  
   }
@@ -239,7 +241,8 @@ if (!exploreCorners) {
   if (!exploreCornersBotLeft) {
     with (objGoldfish) {
       if (x &lt; 200 &amp;&amp; y &gt; room_height - 200) {
-        exploreCornersBotLeft = true;
+        other.exploreCornersBotLeft = true;
+                        show_debug_message("bottom left");
       }
     }  
   }
@@ -247,7 +250,8 @@ if (!exploreCorners) {
   if (!exploreCornersBotRight) {
     with (objGoldfish) {
       if (x &gt; room_width - 200 &amp;&amp; y &gt; room_height -200) {
-        exploreCornersBotRight = true;
+        other.exploreCornersBotRight = true;
+                show_debug_message("bottom right");        
       }
     }  
   }
@@ -255,7 +259,7 @@ if (!exploreCorners) {
 
   if (exploreCornersTopLeft &amp;&amp; exploreCornersTopRight &amp;&amp; exploreCornersBotLeft &amp;&amp; exploreCornersBotRight) {
     scrAwardAchievement('exploreCorners');
-    exploerCorners = true;
+    exploreCorners = true;
   }
 }
 </string>
