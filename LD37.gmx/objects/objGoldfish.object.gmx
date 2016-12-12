@@ -195,10 +195,8 @@ alarm[8] = irandom_range(bubbleCooldownMinimum, bubbleCooldownMaximum);
 mouthX = x + lengthdir_x(77, direction);
 mouthY = y + lengthdir_y(2, direction);
 
-show_debug_message("Creating a goldfish bubble at (" + string(mouthX) + ", " + string(mouthY) + ")");
 instance_create(mouthX, mouthY, objBubble);
 if(random(1) &lt; 0.2) {
-show_debug_message("Creating a second goldfish bubble at (" + string(mouthX) + ", " + string(mouthY) + ")");
   instance_create(mouthX + 5, mouthY - 15, objBubble);
 }
 
