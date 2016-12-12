@@ -64,7 +64,9 @@ if ($result['memoryLoss'] == true) {
 if ($result['pissedShrimp'] == true) {
     echo 'Get Off My Lawn - Have 3 shrimp get angry at you in one game.<br>';
 }
-	
+if ($result['kungfu'] == true) {
+    echo 'Kung Fu Fighting - Die to a Betta fish 5 times.<br>';
+}	
 
 
 ?>
