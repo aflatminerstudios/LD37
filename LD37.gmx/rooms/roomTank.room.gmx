@@ -66,6 +66,7 @@
     <instance objName="objTallPlantBackground" x="1344" y="1040" name="inst_3F649A23" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTallPlantForeground" x="480" y="1024" name="inst_766974E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTallPlantForeground" x="1056" y="960" name="inst_EF318C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBettaFish" x="1216" y="304" name="inst_16300875" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

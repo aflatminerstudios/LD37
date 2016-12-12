@@ -134,6 +134,7 @@
         <object>objects\objSuckerFish</object>
       </objects>
       <objects name="Hostile Fish">
+        <object>objects\objBettaFish</object>
         <object>objects\objHostileFish</object>
       </objects>
     </objects>
