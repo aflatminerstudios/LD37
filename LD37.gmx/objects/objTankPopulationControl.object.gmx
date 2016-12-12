@@ -81,7 +81,7 @@ if(instance_number(objNeutralFish) &lt; minNeutralFish) {
 
 if(instance_number(objHostileFish) &lt; minHostileFish) {
   //show_debug_message("Below minumum hostile fish, creating a hostile fish.");
-  scrCreateNeutralFish();
+  scrCreateHostileFish();
 }
 </string>
           </argument>
@@ -118,7 +118,9 @@ if(newInhabitantType == objPlant) {
     scrCreateNeutralFish();
   }
 } else if(newInhabitantType == objHostileFish) {
-
+  if(instance_number(objHostileFish) &lt; maxNeutralFish) {
+    scrCreateHostileFish();
+  }
 }
 
 alarm[normalRespawnAlarm] = normalRespawnCooldown;
