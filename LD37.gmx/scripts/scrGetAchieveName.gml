@@ -29,6 +29,8 @@ if (which == "eat35flakes") {
   return "Get Off My Lawn";
 } else if (which == "kungfu") {
   return "Kung Fu Fighting";
+} else if (which == "poop") {
+  return "Everybody Poops";
 }
 
 

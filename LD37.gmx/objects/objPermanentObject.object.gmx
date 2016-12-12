@@ -37,6 +37,7 @@ ds_map_add(achieves, "stareAtWall", false)
 ds_map_add(achieves, "lazyBum", false)
 ds_map_add(achieves, "exploreCorners", false)
 ds_map_add(achieves, "pissedShrimp", false)
+ds_map_add(achieves, "poop", false)
 </string>
           </argument>
         </arguments>
