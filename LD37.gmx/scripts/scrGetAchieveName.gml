@@ -17,7 +17,16 @@ if (which == "eat35flakes") {
   return "Lebron";
 } else if (which = "stareAtWall") {
   return "Nietzsche";
+} else if (which = "shareFood") {
+  return "Sharing is Caring";
+} else if (which = "exploreCorners") {
+  return "Dora the Explorer";
+} else if (which = "lazyBum") {
+  return "Lazy Bum";
+} else if (which = "memoryLoss") {
+  return "Short-term Memory";
 }
+
 
 
 return "";

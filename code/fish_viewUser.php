@@ -32,7 +32,7 @@ if ($result['totalgames20'] == true) {
 	echo 'Persistent - Died 20 times<br>';
 }
 if ($result['eat35flakes'] == true) {
-	echo 'Gourmand - Eat 35 pieces of food<br>';
+	echo 'Gourmand - Eat 50 pieces of food<br>';
 }
 if ($result['totalScore1000'] == true) {
 	echo 'High Roller - Score 100 total points<br>';
@@ -50,7 +50,7 @@ if ($result['stareAtWall'] == true) {
 	echo 'Nietzsche - You gazed too long at the outside world. And it gazed back.<br>';
 }
 if ($result['shareFood'] == true) {
-	echo 'Sharing is Caring - Allow other fish to eat 50 pieces of food.<br>';
+	echo 'Sharing is Caring - Allow other fish to eat 50 total pieces of food.<br>';
 }
 if ($result['exploreCorners'] == true) {
 	echo 'Dora the Explorer - Explore all 4 corners of the tank in one game.<br>';

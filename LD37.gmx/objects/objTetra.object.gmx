@@ -372,6 +372,10 @@ if(!justFed) {
   
   slowdown = true;
   alarm[2] = room_speed * slowdownTime;
+  
+  with (objPersistentObject) {
+    otherFlakes++;
+  }
 }
 </string>
           </argument>
