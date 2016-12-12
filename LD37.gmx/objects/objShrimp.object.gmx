@@ -61,6 +61,8 @@ moveState = "idle"; // "idle", "move", "irritated"
 alarm[0] = 1; // Kick off state updates
 
 facing = 1; // 1 = right, -1 = left
+
+image_speed = 10/room_speed;
 </string>
           </argument>
         </arguments>
