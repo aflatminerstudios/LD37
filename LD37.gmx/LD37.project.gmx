@@ -68,6 +68,17 @@
       <sprite>sprites\sprBetaAngry</sprite>
       <sprite>sprites\sprBetaIdle</sprite>
     </sprites>
+    <sprites name="Cause Of Death">
+      <sprite>sprites\sprBettaBroNoChill</sprite>
+      <sprite>sprites\sprBettaAlpha</sprite>
+      <sprite>sprites\sprCatAhole</sprite>
+      <sprite>sprites\sprCatFurry</sprite>
+      <sprite>sprites\sprCrab</sprite>
+      <sprite>sprites\sprCrushinator</sprite>
+      <sprite>sprites\sprOvereat</sprite>
+      <sprite>sprites\sprOvereat2</sprite>
+      <sprite>sprites\sprStarve</sprite>
+    </sprites>
     <sprite>sprites\sprSmallBubble</sprite>
     <sprite>sprites\sprSmallestBubble</sprite>
     <sprite>sprites\sprDeadGoldfish</sprite>
@@ -77,6 +88,7 @@
     <background>background\bgBehindTankNoCat</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
+    <background>background\bgGameOverScreen</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathPaw</path>
