@@ -29,10 +29,17 @@
 
 sprite_index = choose(sprBubble, sprSmallBubble, sprSmallBubble, sprSmallestBubble, sprSmallestBubble);
 
-vspeed = -6;
-wobbleAmplitude = 3+random(2);
-wobbleFrequency = 0.05*pi; // Amount to increase per step, in radians
+vspeed = random_range(-4, -6);
+
+wobbleAmplitude = random_range(3, 5);
+wobbleFrequency = random_range(0.04, 0.06)*pi; // Amount to increase per step, in radians
 currentPhase = 0;
+
+// Big bubbles go slightly faster and wobble a little less
+if(sprite_index == sprBubble) {
+  vspeed += -0.5; 
+  wobbleAmplitude = wobbleAmplitude*0.8;
+}
 
 </string>
           </argument>
