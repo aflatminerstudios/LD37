@@ -27,8 +27,10 @@
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
+      <sprite>sprites\sprTitleTube</sprite>
       <sprite>sprites\sprTitleText</sprite>
       <sprite>sprites\sprTitleInstructionsText</sprite>
+      <sprite>sprites\sprGoldfishTitle</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprBarrierSeeThrough</sprite>
@@ -107,6 +109,7 @@
     <sprite>sprites\sprSmallestBubble</sprite>
     <sprite>sprites\sprDeadGoldfish</sprite>
     <sprite>sprites\sprAngelFish</sprite>
+    <sprite>sprites\sprPoop</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgLogoScreen</background>
@@ -158,7 +161,9 @@
   </fonts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
+      <object>objects\objTitleTube</object>
       <object>objects\objLogoControl</object>
+      <object>objects\objGoldfishTitle</object>
       <object>objects\objTitleControl</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
@@ -214,6 +219,7 @@
     <object>objects\objDeadGoldfish</object>
     <object>objects\objFilterTube</object>
     <object>objects\objCOD</object>
+    <object>objects\objFishPoop</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
