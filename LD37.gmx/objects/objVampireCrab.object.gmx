@@ -49,8 +49,9 @@ event_inherited();
             <kind>1</kind>
             <string>/// Instance variables
 
-moveState = "idle"; // "idle", "attacking"
+image_speed = 30/room_speed; 
 
+moveState = "idle"; // "idle", "attacking"
 hitFrame = 9; // Frame in animation that we check for collision
 </string>
           </argument>
