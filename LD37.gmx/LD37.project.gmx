@@ -27,6 +27,7 @@
       <sprite>sprites\sprTitleInstructionsText</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
+    <sprite>sprites\sprBarrierSeeThrough</sprite>
     <sprite>sprites\sprCatPaw</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprite>sprites\sprCancelButton</sprite>
@@ -190,6 +191,7 @@
     <object>objects\objFilterBubbles</object>
     <object>objects\objCancelButton</object>
     <object>objects\objDeadGoldfish</object>
+    <object>objects\objFilterTube</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>

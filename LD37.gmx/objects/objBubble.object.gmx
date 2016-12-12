@@ -70,6 +70,31 @@ currentPhase = (currentPhase + wobbleFrequency) % 2*pi;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Destroy if off screen
+
+if (y &lt; TOPOFTANK) {
+  instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="8" enumb="0">
       <action>
@@ -91,9 +116,9 @@ currentPhase = (currentPhase + wobbleFrequency) % 2*pi;
             <string>/// Draw bubble with sine wave offset
 
 lerpPhase = sin(currentPhase);
-xOffset = lerp(-wobbleAmplitude/2, wobbleAmplitude/2, lerpPhase);
+yOffset = lerp(-wobbleAmplitude/2, wobbleAmplitude/2, lerpPhase);
 
-draw_sprite(sprite_index, image_index, x + xOffset, y);
+draw_sprite(sprite_index, image_index, x, y + yOffset);
 </string>
           </argument>
         </arguments>

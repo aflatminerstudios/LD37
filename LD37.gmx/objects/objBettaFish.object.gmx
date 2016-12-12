@@ -53,7 +53,11 @@ event_inherited();
 hunting = true;
 taunting = false;
 
-goldfish = objGoldfish.id;
+if (instance_exists(objGoldfish)) {
+  goldfish = objGoldfish.id;
+} else {
+  goldfish = noone;
+}
 
 baseSpeed = 2;
 maxSpeed = 6;
