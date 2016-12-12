@@ -28,6 +28,8 @@
             <string>msg = "";
 time = 0;
 flakes = 0;
+disappeared = 0;
+otherFlakes = 0;
 
 numAchievements = 0;
 achievements[0] = "";

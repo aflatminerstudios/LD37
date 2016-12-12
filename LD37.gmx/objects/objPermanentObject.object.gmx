@@ -34,7 +34,8 @@ ds_map_add(achieves, "live60s", false)
 ds_map_add(achieves, "score250game", false)
 ds_map_add(achieves, "flakes15game", false)
 ds_map_add(achieves, "stareAtWall", false)
-
+ds_map_add(achieves, "lazyBum", false)
+ds_map_add(achieves, "exploreCorners", false)
 </string>
           </argument>
         </arguments>

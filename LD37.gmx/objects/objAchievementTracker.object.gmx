@@ -31,6 +31,14 @@ live60s = false;
 score250game = false;
 flakes15game = false;
 stareAtWall = false;
+lazyBum = false;
+exploreCorners = false;
+
+//explore corners subvariables
+exploreCornersTopLeft = false;
+exploreCornersTopRight = false;
+exploreCornersBotLeft = false;
+exploreCornersBotRight = false;
 </string>
           </argument>
         </arguments>
@@ -153,6 +161,105 @@ if (!live60s) {
   if (objTimer.time &gt;= 60) {
     scrAwardAchievement("live60s");
     live60s = true;
+  }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check for lazy bum
+if (!lazyBum) {
+  with (objGoldfish) {
+    //If not moving
+    if (curForward == 0) {
+        sitStill++;
+        if (sitStill &gt;= (room_speed * lazyBumSeconds)) {
+          scrAwardAchievement("lazyBum");
+        }                  
+    } else {
+      sitStill = 0;
+    }
+  }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Check explore corners
+if (!exploreCorners) {
+
+  if (!exploreCornersTopLeft) {
+    with (objGoldfish) {
+      if (x &lt; 200 &amp;&amp; y &lt; 200) {
+        other.exploreCornersTopLeft = true;
+        show_debug_message("top left");
+      }
+    }
+  }
+  
+  if (!exploreCornersTopRight) {
+    with (objGoldfish) {
+      if (x &gt; room_width - 200 &amp;&amp; y &lt; 200) {
+        other.exploreCornersTopRight = true;
+                show_debug_message("top right");
+      }
+    }  
+  }
+  
+  if (!exploreCornersBotLeft) {
+    with (objGoldfish) {
+      if (x &lt; 200 &amp;&amp; y &gt; room_height - 200) {
+        other.exploreCornersBotLeft = true;
+                        show_debug_message("bottom left");
+      }
+    }  
+  }
+  
+  if (!exploreCornersBotRight) {
+    with (objGoldfish) {
+      if (x &gt; room_width - 200 &amp;&amp; y &gt; room_height -200) {
+        other.exploreCornersBotRight = true;
+                show_debug_message("bottom right");        
+      }
+    }  
+  }
+
+
+  if (exploreCornersTopLeft &amp;&amp; exploreCornersTopRight &amp;&amp; exploreCornersBotLeft &amp;&amp; exploreCornersBotRight) {
+    scrAwardAchievement('exploreCorners');
+    exploreCorners = true;
   }
 }
 </string>

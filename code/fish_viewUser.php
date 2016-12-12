@@ -32,7 +32,7 @@ if ($result['totalgames20'] == true) {
 	echo 'Persistent - Died 20 times<br>';
 }
 if ($result['eat35flakes'] == true) {
-	echo 'Gourmand - Eat 35 pieces of food<br>';
+	echo 'Gourmand - Eat 50 pieces of food<br>';
 }
 if ($result['totalScore1000'] == true) {
 	echo 'High Roller - Score 100 total points<br>';
@@ -41,7 +41,7 @@ if ($result['live60s'] == true) {
 	echo 'Survivor - Survive for 60 seconds in one game<br>';
 }
 if ($result['flakes15game'] == true) {
-	echo 'Glutton - Eat 15 flakes in one game<br>';
+	echo 'Glutton - Eat 15 pieces of food in one game<br>';
 }
 if ($result['score250game'] == true) {
 	echo 'Lebron - Score 250 points in one game<br>';
@@ -49,6 +49,19 @@ if ($result['score250game'] == true) {
 if ($result['stareAtWall'] == true) {
 	echo 'Nietzsche - You gazed too long at the outside world. And it gazed back.<br>';
 }
+if ($result['shareFood'] == true) {
+	echo 'Sharing is Caring - Allow other fish to eat 50 total pieces of food.<br>';
+}
+if ($result['exploreCorners'] == true) {
+	echo 'Dora the Explorer - Explore all 4 corners of the tank in one game.<br>';
+}
+if ($result['lazyBum'] == true) {
+	echo 'Lazy Bum - Remain unmoving for 10 seconds.<br>';
+}
+if ($result['memoryLoss'] == true) {
+    echo 'Short-term Memory - 50 total objects/creatures disappear because you forgot about them.<br>';
+}
+	
 
 
 ?>

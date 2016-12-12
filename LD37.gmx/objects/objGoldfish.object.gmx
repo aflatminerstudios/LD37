@@ -139,6 +139,9 @@ image_speed = 0.5;
 
 wallStare = 0;
 stareSeconds = 5;
+
+sitStill = 0;
+lazyBumSeconds = 10;
 </string>
           </argument>
         </arguments>
