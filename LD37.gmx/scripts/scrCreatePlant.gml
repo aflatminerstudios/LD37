@@ -1,6 +1,6 @@
 /// scrCreatePlant()
 
-var newPlantType = choose(objTallPlantForeground, objTallPlantBackground);
+var newPlantType = choose(objTallPlantForeground, objTallPlantForeground, objTallPlantBackground, objTallPlantBackground, objTallPlantBackground);
 
 var possibleX = irandom_range(LEFTSIDEOFTANK + 75, RIGHTSIDEOFTANK - 75);
 var possibleY = BOTTOMOFTANK + irandom(20);
