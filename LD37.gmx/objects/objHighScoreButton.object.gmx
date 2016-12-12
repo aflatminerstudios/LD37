@@ -25,8 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-if (!objTextInput.locked) {
+            <string>///Send high score
+
+if (!objTextInput.locked &amp;&amp; objTextInput.text != "") {
   text = objTextInput.text;
   scrSendHighScore(text, score);
   

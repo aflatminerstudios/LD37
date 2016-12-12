@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///setup variables
 
-//get = -1;
+//get = noone;
 </string>
           </argument>
         </arguments>
@@ -54,29 +54,33 @@
 
 r_str = "null";
 
-  //show_debug_message("get: " + string(get));
-  //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
-if ds_map_find_value(async_load, "id") == get
-{
-  //show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
-  if ds_map_find_value(async_load, "status") == 0
+if (!is_undefined(get)) {
+    //show_debug_message("get: " + string(get));
+    //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
+  if ds_map_find_value(async_load, "id") == get
   {
-    r_str = ds_map_find_value(async_load, "result");
+    //show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
+    if ds_map_find_value(async_load, "status") == 0
+    {
+      r_str = ds_map_find_value(async_load, "result");
+    }
+    else
+    {
+      r_str = "null";
+    }
   }
-  else
-  {
-    r_str = "null";
+  //show_debug_message(string_count("Success", r_str));
+  if (r_str == "Success") {
+    show_debug_message("YEAH!");
+  } else {
+    //show_debug_message(r_str);
   }
-}
-//show_debug_message(string_count("Success", r_str));
-if (r_str == "Success") {
-  show_debug_message("YEAH!");
-} else {
-  //show_debug_message(r_str);
 }
 
 with (objGameOverControl) {
-  alarm[1] = room_speed;
+  if (alarm[1] &lt;= 0 || alarm[1] &gt;= room_speed) {
+    alarm[1] = room_speed;
+  }
 }
 </string>
           </argument>

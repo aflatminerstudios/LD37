@@ -27,7 +27,11 @@ $stmt->execute();
 while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
 	echo '<tr>';
     foreach ($result as $row => $rValue) {
-		echo '<td>',$rValue,'</td>';
+		if ($row == 'user') {
+			echo '<td><a href="http://www.catbirdgames.com/fish/fish_viewUser.php?user='.$rValue.'">',$rValue,'</a></td>';
+		} else {			
+			echo '<td>',$rValue,'</td>';
+		}
     }
     echo "</tr>";
 }

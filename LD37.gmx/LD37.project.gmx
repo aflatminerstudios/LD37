@@ -10,18 +10,48 @@
       <sprite>sprites\sprGraybox16x16</sprite>
       <sprite>sprites\sprGraybox32x32</sprite>
       <sprite>sprites\sprGraybox64x64</sprite>
+      <sprite>sprites\sprGraybox128x128</sprite>
     </sprites>
-    <sprite>sprites\sprGoldfish</sprite>
-    <sprite>sprites\sprGoldfishHungry</sprite>
+    <sprites name="Goldfish">
+      <sprite>sprites\sprGoldfish</sprite>
+      <sprite>sprites\sprGoldfishMoving</sprite>
+      <sprite>sprites\sprGoldfishHungryMoving</sprite>
+      <sprite>sprites\sprGoldfishHungry</sprite>
+      <sprite>sprites\sprGoldfishFullMoving</sprite>
+      <sprite>sprites\sprGoldfishFull</sprite>
+    </sprites>
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
+      <sprite>sprites\sprTitleText</sprite>
+      <sprite>sprites\sprTitleInstructionsText</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
-    <sprite>sprites\sprGoldfishFull</sprite>
-    <sprite>sprites\sprTallRibbonPlant</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
+    <sprites name="Plants">
+      <sprite>sprites\sprTallPlantForeground</sprite>
+      <sprite>sprites\sprTallPlantBackground</sprite>
+    </sprites>
+    <sprites name="Neutral Fish">
+      <sprite>sprites\sprTetra</sprite>
+      <sprites name="Shrimp">
+        <sprite>sprites\sprShrimpIdle</sprite>
+        <sprite>sprites\sprShrimpIrritated</sprite>
+        <sprite>sprites\sprShrimpWalking</sprite>
+      </sprites>
+      <sprites name="Sucker Fish">
+        <sprite>sprites\sprSuckerFishIdle</sprite>
+        <sprite>sprites\sprSuckerFishMoving</sprite>
+      </sprites>
+    </sprites>
+    <sprite>sprites\sprAchievementOpen</sprite>
+    <sprite>sprites\sprAchievementClose</sprite>
+    <sprite>sprites\sprFishPellet</sprite>
+    <sprite>sprites\sprFishFlake1</sprite>
+    <sprite>sprites\sprFishFlake2</sprite>
+    <sprite>sprites\sprFishFlake3</sprite>
+    <sprite>sprites\sprFishFlake4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -48,10 +78,19 @@
     <script>scripts\scrIsInRect.gml</script>
     <scripts name="Networking">
       <script>scripts\scrSendHighScore.gml</script>
+      <script>scripts\scrSendAchieve.gml</script>
     </scripts>
+    <scripts name="Tank Population">
+      <script>scripts\scrCreatePlant.gml</script>
+      <script>scripts\scrCreateHostileFish.gml</script>
+      <script>scripts\scrCreateNeutralFish.gml</script>
+    </scripts>
+    <script>scripts\scrAwardAchievement.gml</script>
+    <script>scripts\scrGetAchieveName.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontNormal</font>
+    <font>fonts\fontAchieve</font>
     <font>fonts\fontLarge</font>
   </fonts>
   <objects name="objects">
@@ -60,10 +99,17 @@
       <object>objects\objTitleControl</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
+      <object>objects\objTitleText</object>
+      <object>objects\objTitleInstructionsText</object>
     </objects>
     <object>objects\objGoldfish</object>
-    <object>objects\objFishFlakes</object>
-    <object>objects\objFishFoodDispenser</object>
+    <object>objects\objAchievementTracker</object>
+    <objects name="Fish Food">
+      <object>objects\objFishFood</object>
+      <object>objects\objFishFlakes</object>
+      <object>objects\objFishFoodPellets</object>
+      <object>objects\objFishFoodDispenser</object>
+    </objects>
     <object>objects\objGameControl</object>
     <object>objects\objTimer</object>
     <object>objects\objBarrier</object>
@@ -72,13 +118,31 @@
       <object>objects\objHighScoreSend</object>
       <object>objects\objTextInput</object>
       <object>objects\objGameOverControl</object>
-      <object>objects\objHighScoreButton</object>
+      <object>objects\objAchievementFinder</object>
     </objects>
-    <object>objects\canDespawn</object>
-    <objects name="Plants">
-      <object>objects\objPlant</object>
-      <object>objects\objTallRibbonPlant</object>
+    <objects name="Tank Population">
+      <object>objects\objTankPopulationControl</object>
+      <object>objects\canDespawn</object>
+      <objects name="Plants">
+        <object>objects\objPlant</object>
+        <object>objects\objTallPlantForeground</object>
+        <object>objects\objTallPlantBackground</object>
+      </objects>
+      <objects name="Neutral Fish">
+        <object>objects\objNeutralFish</object>
+        <object>objects\objTetra</object>
+        <object>objects\objShrimp</object>
+        <object>objects\objSuckerFish</object>
+      </objects>
+      <objects name="Hostile Fish">
+        <object>objects\objBettaFish</object>
+        <object>objects\objHostileFish</object>
+      </objects>
     </objects>
+    <object>objects\objPersistentObject</object>
+    <object>objects\objAchievementToast</object>
+    <object>objects\objHighScoreButton</object>
+    <object>objects\objPermanentObject</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
@@ -86,8 +150,12 @@
     <room>rooms\roomTank</room>
     <room>rooms\roomGameOver</room>
   </rooms>
-  <constants number="1">
+  <constants number="5">
     <constant name="SERVER_ADDRESS">"http://www.catbirdgames.com/fish/"</constant>
+    <constant name="TOPOFTANK">130</constant>
+    <constant name="BOTTOMOFTANK">1000</constant>
+    <constant name="LEFTSIDEOFTANK">200</constant>
+    <constant name="RIGHTSIDEOFTANK">1400</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>

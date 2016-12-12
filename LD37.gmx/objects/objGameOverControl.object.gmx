@@ -52,6 +52,9 @@
             <string>///Set up variables
 
 ready = false;
+
+message = objPersistentObject.msg;
+
 </string>
           </argument>
         </arguments>
@@ -76,6 +79,26 @@ ready = false;
 
 //result = get_string_async("What is your username?","");
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
@@ -126,6 +149,11 @@ ready = true;
 
 if (ready &amp;&amp; (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any))) {
   score = 0;
+  
+  with (objPersistentObject) {
+    instance_destroy();
+  }
+  
   room_goto(roomTitle);
 }
 </string>
@@ -165,6 +193,8 @@ if (objTextInput.locked) {
 
 draw_set_font(fontNormal);
 draw_text(room_width/2, 110, "Congratulations" + string(name) + "! You scored " + string(score) + " points.");
+
+draw_text(room_width/2, 160, message);
 
 if (!objTextInput.locked) {
   draw_set_color(c_black);

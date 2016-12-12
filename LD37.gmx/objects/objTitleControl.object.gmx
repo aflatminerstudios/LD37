@@ -32,14 +32,17 @@
 viewing = 0;
 
 framesPerScroll = 1;
-pixelsPerScroll = 10;
-parallaxPixels = 7;
+pixelsPerScroll = 15;
+parallaxPixels = 10;
+textParallaxPixels = -10;
 
 
 //View position for title screen
 titlePosition = 800;
 
 BG = instance_create(930, 300, objTitleParallax);
+titleText = instance_find(objTitleText, 0);
+titleInstructionsText = instance_find(objTitleInstructionsText, 0);
 </string>
           </argument>
         </arguments>
@@ -64,7 +67,10 @@ BG = instance_create(930, 300, objTitleParallax);
             <kind>1</kind>
             <string>///Scroll to title screen
 view_xview += pixelsPerScroll;
+
 BG.x += parallaxPixels;
+titleText.x += textParallaxPixels;
+titleInstructionsText.x += textParallaxPixels;
 
 if (view_xview &gt;= titlePosition) {
   view_xview = titlePosition;
@@ -98,6 +104,8 @@ if (view_xview &gt;= titlePosition) {
 view_xview -= pixelsPerScroll;
 
 BG.x -= parallaxPixels;
+titleText.x -= textParallaxPixels;
+titleInstructionsText.x -= textParallaxPixels;
 
 if (view_xview &lt;= 0) {
   view_xview = 0;
@@ -136,11 +144,11 @@ if (viewing == 0) {
     alarm[0] = framesPerScroll;
   } /*else if (keyboard_check_pressed(ord('I'))) {
     //scroll to instructions
-  }*/ else if (keyboard_check_pressed(vk_anykey)) {
+  }*/ else if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_left)) {
     room_goto(roomTank);
   }
 } else if (viewing == -1) {
-  if (keyboard_check_pressed(vk_anykey)) {
+  if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_left)) {
     viewing = -2;
     alarm[1] = framesPerScroll;
   }
