@@ -8,6 +8,33 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Make all input, etc. go away and trigger ability to leave room
+
+objTextInput.locked = true;
+
+objGameOverControl.alarm[1] = room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -47,10 +74,10 @@
             <kind>1</kind>
             <string>///Change sprite
 
-if (mouse_check_button(mb_left)) {
-  sprite_index = sprHighScorePressed;
+if (mouse_check_button(mb_left) &amp;&amp; position_meeting(mouse_x, mouse_y, objCancelButton)) {
+  sprite_index = sprCancelPressed;
 } else {
-  sprite_index = sprHighScoreButton;
+  sprite_index = sprCancelButton;
 }
 </string>
           </argument>
@@ -74,11 +101,8 @@ if (mouse_check_button(mb_left)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Make all input, etc. go away and trigger ability to leave room
-
-objTextInput.locked = true;
-
-objGameOverControl.alarm[1] = room_speed;
+            <string>///Set alarm
+alarm[0] = room_speed / 2;
 </string>
           </argument>
         </arguments>

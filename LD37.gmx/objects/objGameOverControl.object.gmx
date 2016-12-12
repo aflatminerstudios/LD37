@@ -98,7 +98,10 @@ message = objPersistentObject.msg;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>///Play sound
+
+audio_play_sound(sndFlush, 100, false);
+</string>
           </argument>
         </arguments>
       </action>
@@ -180,26 +183,26 @@ if (ready &amp;&amp; (keyboard_check_pressed(vk_anykey) || mouse_check_button_pr
             <kind>1</kind>
             <string>///Draw text on game over screen
 
-draw_set_color(c_maroon);
+draw_set_color(c_white);
 draw_set_font(fontLarge);
 draw_set_halign(fa_center);
 
-draw_text(room_width/2, 32, "Game Over!");
-
-var name = "";
+/*var name = "";
 if (objTextInput.locked) {
   name = ", " + string(objTextInput.text);
-}
+}*/
 
-draw_set_font(fontNormal);
-draw_text(room_width/2, 110, "Congratulations" + string(name) + "! You scored " + string(score) + " points.");
+//draw_set_font(fontNormal);
+draw_text(645, 224, string(score));
 
-draw_text(room_width/2, 160, message);
+draw_text(645, 112, string_format(objPersistentObject.time, 0, 2) + " sec");
 
-if (!objTextInput.locked) {
+draw_text(645, 384, string(objPersistentObject.flakes));
+
+/*if (!objTextInput.locked) {
   draw_set_color(c_black);
   draw_text(room_width/2, 250, "Please input your username below and press enter or click the button");
-}
+}*/
 
 draw_set_halign(fa_left);
 </string>
