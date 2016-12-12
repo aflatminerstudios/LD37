@@ -29,6 +29,7 @@
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
+    <sprite>sprites\sprCancelButton</sprite>
     <sprites name="Plants">
       <sprite>sprites\sprTallPlantForeground</sprite>
       <sprite>sprites\sprTallPlantBackground</sprite>
@@ -143,6 +144,7 @@
     <object>objects\objAchievementToast</object>
     <object>objects\objHighScoreButton</object>
     <object>objects\objPermanentObject</object>
+    <object>objects\objCancelButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
