@@ -82,6 +82,7 @@
     </scripts>
     <scripts name="Tank Population">
       <script>scripts\scrCreatePlant.gml</script>
+      <script>scripts\scrCreateHostileFish.gml</script>
       <script>scripts\scrCreateNeutralFish.gml</script>
     </scripts>
     <script>scripts\scrAwardAchievement.gml</script>
@@ -134,6 +135,7 @@
         <object>objects\objSuckerFish</object>
       </objects>
       <objects name="Hostile Fish">
+        <object>objects\objBettaFish</object>
         <object>objects\objHostileFish</object>
       </objects>
     </objects>
