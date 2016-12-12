@@ -107,7 +107,7 @@ if(instance_number(objHostileFish) &lt; minHostileFish) {
             <kind>1</kind>
             <string>/// Try to create a new instance and reset the timer
 
-var newInhabitantType = choose(objPlant, objPlant, objNeutralFish, objHostileFish);
+var newInhabitantType = choose(objPlant, objPlant, objPlant, objPlant, objNeutralFish, objNeutralFish, objNeutralFish, objHostileFish);
 
 if(newInhabitantType == objPlant) {
   if(instance_number(objPlant) &lt; maxPlants) {
