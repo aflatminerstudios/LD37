@@ -167,6 +167,7 @@
     <object>objects\objFilterBubbles</object>
     <object>objects\objCancelButton</object>
     <object>objects\objDeadGoldfish</object>
+    <object>objects\objFilterTube</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
