@@ -78,7 +78,9 @@ if (!is_undefined(get)) {
 }
 
 with (objGameOverControl) {
-  alarm[1] = room_speed;
+  if (alarm[1] &lt;= 0 || alarm[1] &gt;= room_speed) {
+    alarm[1] = room_speed;
+  }
 }
 </string>
           </argument>

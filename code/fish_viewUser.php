@@ -61,6 +61,9 @@ if ($result['lazyBum'] == true) {
 if ($result['memoryLoss'] == true) {
     echo 'Short-term Memory - 50 total objects/creatures disappear because you forgot about them.<br>';
 }
+if ($result['pissedShrimp'] == true) {
+    echo 'Get Off My Lawn - Have 3 shrimp get angry at you in one game.<br>';
+}
 	
 
 
