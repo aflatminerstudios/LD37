@@ -22,4 +22,10 @@ with (objPersistentObject) {
 
 //show_message(msg + "\n You scored " + string(score) + " points!");
 
-room_goto(roomGameOver);
+//Replace goldfish with dead goldfish
+var d = instance_create(objGoldfish.x, objGoldfish.y, objDeadGoldfish);
+
+
+with (objGoldfish) {
+  instance_destroy();
+}

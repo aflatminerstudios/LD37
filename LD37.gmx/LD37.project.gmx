@@ -63,6 +63,7 @@
     </sprites>
     <sprite>sprites\sprSmallBubble</sprite>
     <sprite>sprites\sprSmallestBubble</sprite>
+    <sprite>sprites\sprDeadGoldfish</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -157,6 +158,7 @@
     <object>objects\objBubble</object>
     <object>objects\objFilterBubbles</object>
     <object>objects\objCancelButton</object>
+    <object>objects\objDeadGoldfish</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
