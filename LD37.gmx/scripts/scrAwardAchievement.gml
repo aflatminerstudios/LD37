@@ -2,7 +2,6 @@
 
 var which = argument0;
 
-
 with (objPersistentObject) {
   achievements[numAchievements] = which;
   numAchievements++;

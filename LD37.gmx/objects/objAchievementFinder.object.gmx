@@ -82,6 +82,12 @@ if (count &lt; array_length_1d(achievesEarned)) {
 
 r_str = "null";
 
+with (objGameOverControl) {
+  if (alarm[1] &lt;= 0 || alarm[1] &gt;= room_speed) {
+    alarm[1] = room_speed;
+  }
+}
+
   //show_debug_message("get: " + string(get));
   //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
   //if ds_map_find_value(async_load, "id") == get
