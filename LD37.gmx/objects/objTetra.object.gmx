@@ -288,8 +288,10 @@ if (curTarget == noone || !instance_exists(curTarget)) {
   if (num &gt; 0) {
     curTarget = instance_find(objFishFood, irandom(num));
   } else {
-    curTarget = objGoldfish;
-    alarm[1] = random(5) * room_speed;
+    if (instance_number(objGoldfish) &gt; 0) {
+      curTarget = objGoldfish;    
+      alarm[1] = random(5) * room_speed;
+    }
   }
 }
 

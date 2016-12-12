@@ -27,6 +27,8 @@ if (which == "eat35flakes") {
   return "Short-term Memory";
 } else if (which == "pissedShrimp") {
   return "Get Off My Lawn";
+} else if (which == "kungfu") {
+  return "Kung Fu Fighting";
 }
 
 

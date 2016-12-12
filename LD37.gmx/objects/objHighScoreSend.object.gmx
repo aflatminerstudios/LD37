@@ -33,7 +33,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="62">
+    <event eventtype="7" enumb="66">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -54,10 +54,10 @@
 
 r_str = "null";
 
-if (!is_undefined(get)) {
+
     //show_debug_message("get: " + string(get));
     //show_debug_message("id: " + string(ds_map_find_value(async_load, "id")));
-  if ds_map_find_value(async_load, "id") == get
+
   {
     //show_debug_message("status: " + string(ds_map_find_value(async_load, "status")));
     if ds_map_find_value(async_load, "status") == 0
@@ -75,7 +75,6 @@ if (!is_undefined(get)) {
   } else {
     //show_debug_message(r_str);
   }
-}
 
 with (objGameOverControl) {
   if (alarm[1] &lt;= 0 || alarm[1] &gt;= room_speed) {
