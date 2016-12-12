@@ -25,8 +25,10 @@
     <sprites name="TitleScreen">
       <sprite>sprites\sprTitleParallax</sprite>
       <sprite>sprites\sprTitleFG</sprite>
+      <sprite>sprites\sprTitleTube</sprite>
       <sprite>sprites\sprTitleText</sprite>
       <sprite>sprites\sprTitleInstructionsText</sprite>
+      <sprite>sprites\sprGoldfishTitle</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprBarrierSeeThrough</sprite>
@@ -156,7 +158,9 @@
   </fonts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
+      <object>objects\objTitleTube</object>
       <object>objects\objLogoControl</object>
+      <object>objects\objGoldfishTitle</object>
       <object>objects\objTitleControl</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
