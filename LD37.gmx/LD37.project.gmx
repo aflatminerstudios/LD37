@@ -73,7 +73,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
-    <background>background\bgGrid</background>
+    <background>background\bgBehindTankNoCat</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
   </backgrounds>
