@@ -368,9 +368,9 @@ speed = 0;
             <string>///Check hunger
 
 if (hunger &lt; overStuffed) {
-  scrGameOver("Oh no! You ate too much!");
+  scrGameOver("overeat");
 } else if (hunger &gt; starved) {
-  scrGameOver("Oh no! You starved to death!");
+  scrGameOver("starve");
 } else if (hunger &lt; full) {
   if (state != -1) {
     state = -1;
@@ -407,7 +407,7 @@ if (hunger &lt; overStuffed) {
             <string>///Cat collision
 
 if (place_meeting(x, y, objCatPaw)) {
-  scrGameOver("The cat ate you! You lose!");
+  scrGameOver("cat");
 }
 </string>
           </argument>
@@ -432,7 +432,7 @@ if (place_meeting(x, y, objCatPaw)) {
             <string>///Betta Fish collision
 
 if (place_meeting(x, y, objBettaFish)) {
-  scrGameOver("The betta fish destroyed you! You lose!");
+  scrGameOver("betta");
 }
 </string>
           </argument>

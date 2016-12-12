@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sndFlush</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Placeholders">
       <sprite>sprites\sprGraybox16x16</sprite>
@@ -29,7 +31,9 @@
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprBarrierSeeThrough</sprite>
     <sprite>sprites\sprCatPaw</sprite>
+    <sprite>sprites\sprHighScorePressed</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
+    <sprite>sprites\sprCancelPressed</sprite>
     <sprite>sprites\sprCancelButton</sprite>
     <sprites name="Plants">
       <sprites name="Tall Plant Foreground">
@@ -86,15 +90,28 @@
       <sprite>sprites\sprBetaAngry</sprite>
       <sprite>sprites\sprBetaIdle</sprite>
     </sprites>
+    <sprites name="Cause Of Death">
+      <sprite>sprites\sprBettaBroNoChill</sprite>
+      <sprite>sprites\sprBettaAlpha</sprite>
+      <sprite>sprites\sprCatAhole</sprite>
+      <sprite>sprites\sprCatFurry</sprite>
+      <sprite>sprites\sprCrab</sprite>
+      <sprite>sprites\sprCrushinator</sprite>
+      <sprite>sprites\sprOvereat</sprite>
+      <sprite>sprites\sprOvereat2</sprite>
+      <sprite>sprites\sprStarve</sprite>
+    </sprites>
     <sprite>sprites\sprSmallBubble</sprite>
     <sprite>sprites\sprSmallestBubble</sprite>
     <sprite>sprites\sprDeadGoldfish</sprite>
+    <sprite>sprites\sprAngelFish</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
     <background>background\bgBehindTankNoCat</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
+    <background>background\bgGameOverScreen</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathPaw</path>
@@ -160,6 +177,9 @@
     <objects name="GameOver">
       <object>objects\objHighScoreSend</object>
       <object>objects\objTextInput</object>
+      <object>objects\objHighScoreButton</object>
+      <object>objects\objAngelFish</object>
+      <object>objects\objCancelButton</object>
       <object>objects\objGameOverControl</object>
       <object>objects\objAchievementFinder</object>
     </objects>
@@ -185,13 +205,12 @@
     </objects>
     <object>objects\objPersistentObject</object>
     <object>objects\objAchievementToast</object>
-    <object>objects\objHighScoreButton</object>
     <object>objects\objPermanentObject</object>
     <object>objects\objBubble</object>
     <object>objects\objFilterBubbles</object>
-    <object>objects\objCancelButton</object>
     <object>objects\objDeadGoldfish</object>
     <object>objects\objFilterTube</object>
+    <object>objects\objCOD</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>

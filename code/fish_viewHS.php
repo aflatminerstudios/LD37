@@ -4,7 +4,7 @@
  </head>
  <body>
  
- <h1> High Score List For Fishy Game</h1>
+ <h1> High Score List For Fancy Goldfish</h1>
  
  <table>
  <tr>
