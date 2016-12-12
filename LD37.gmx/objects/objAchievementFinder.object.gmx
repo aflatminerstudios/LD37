@@ -130,8 +130,7 @@ with (objGameOverControl) {
           }
       }
       count = 0;
-      show_debug_message(slot);
-      if (slot &gt; 1) {
+      if (slot &gt; 0) {
         alarm[0] = room_speed;
       }
     

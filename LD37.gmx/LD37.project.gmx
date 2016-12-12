@@ -48,11 +48,21 @@
     </sprites>
     <sprite>sprites\sprAchievementOpen</sprite>
     <sprite>sprites\sprAchievementClose</sprite>
-    <sprite>sprites\sprFishPellet</sprite>
-    <sprite>sprites\sprFishFlake1</sprite>
-    <sprite>sprites\sprFishFlake2</sprite>
-    <sprite>sprites\sprFishFlake3</sprite>
-    <sprite>sprites\sprFishFlake4</sprite>
+    <sprites name="Fish Food">
+      <sprite>sprites\sprFishPellet</sprite>
+      <sprite>sprites\sprFishFlake1</sprite>
+      <sprite>sprites\sprFishFlake2</sprite>
+      <sprite>sprites\sprFishFlake3</sprite>
+      <sprite>sprites\sprFishFlake4</sprite>
+    </sprites>
+    <sprite>sprites\sprFilterTube</sprite>
+    <sprite>sprites\sprBubble</sprite>
+    <sprites name="Hostile Fish">
+      <sprite>sprites\sprBetaAngry</sprite>
+      <sprite>sprites\sprBetaIdle</sprite>
+    </sprites>
+    <sprite>sprites\sprSmallBubble</sprite>
+    <sprite>sprites\sprSmallestBubble</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -144,6 +154,8 @@
     <object>objects\objAchievementToast</object>
     <object>objects\objHighScoreButton</object>
     <object>objects\objPermanentObject</object>
+    <object>objects\objBubble</object>
+    <object>objects\objFilterBubbles</object>
     <object>objects\objCancelButton</object>
   </objects>
   <rooms name="rooms">

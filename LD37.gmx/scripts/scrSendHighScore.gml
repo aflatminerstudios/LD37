@@ -8,8 +8,13 @@ var f = objPersistentObject.flakes;
 var t = (objPersistentObject.time * 1000) / room_speed;
 var d = objPersistentObject.disappeared;
 var o = objPersistentObject.otherFlakes;
+var b = 0;
 
-var address = SERVER_ADDRESS + "fish_ahs.php?user=" + string(user) + "&score=" + string(s) + "&other=" + string(hash) + "&flakes=" + string(f) + "&time=" + string(t) + "&dis=" + string(d) + "&oflakes=" + string(o);
+if (string_count("betta" ,objPersistentObject.msg) > 0) {
+  b += 1;
+}
+
+var address = SERVER_ADDRESS + "fish_ahs.php?user=" + string(user) + "&score=" + string(s) + "&other=" + string(hash) + "&flakes=" + string(f) + "&time=" + string(t) + "&dis=" + string(d) + "&oflakes=" + string(o) + "&beta=" + string(b);
 
 
 
