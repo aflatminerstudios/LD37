@@ -215,7 +215,7 @@ if(moveState == "idle") {
 
 if(moveState == "attacking") {
   if(image_index == hitFrame)
-    scrGameOver("Pinched by a vampire crab.");
+    scrGameOver("crab");
 }
 </string>
           </argument>
