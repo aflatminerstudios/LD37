@@ -6,6 +6,8 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\sndFlush</sound>
+    <sound>sound\musTitleScreen</sound>
+    <sound>sound\musGameplay</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Placeholders">
@@ -107,6 +109,7 @@
     <sprite>sprites\sprAngelFish</sprite>
   </sprites>
   <backgrounds name="background">
+    <background>background\bgLogoScreen</background>
     <background>background\bgBehindTank</background>
     <background>background\bgBehindTankNoCat</background>
     <background>background\bgTank</background>

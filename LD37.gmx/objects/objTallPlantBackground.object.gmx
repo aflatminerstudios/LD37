@@ -50,9 +50,6 @@ event_inherited();
             <string>/// Get correct sprite for position
 
 scrUpdateTallPlantBackgroundSprite(self.id);
-
-var newSpriteName = sprite_get_name(sprite_index);
-show_debug_message("New tall plant foreground sprite: " + newSpriteName);
 </string>
           </argument>
         </arguments>

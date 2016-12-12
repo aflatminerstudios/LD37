@@ -100,6 +100,7 @@ message = objPersistentObject.msg;
             <kind>1</kind>
             <string>///Play sound
 
+audio_stop_all();
 audio_play_sound(sndFlush, 100, false);
 </string>
           </argument>
