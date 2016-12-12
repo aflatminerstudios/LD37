@@ -109,9 +109,34 @@ event_inherited();
         <arguments>
           <argument>
             <kind>1</kind>
+            <string>///Make sure goldfish exists
+
+if (!instance_exists(goldfish)) {
+//  goldfish = self.id;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
             <string>///Hunting movement
 
-if (hunting) {
+if (hunting &amp;&amp; instance_exists(goldfish)) {
 
   speed = baseSpeed;
   
@@ -186,7 +211,7 @@ if (hunting) {
             <kind>1</kind>
             <string>///Taunting movement
 
-if (taunting) {
+if (taunting &amp;&amp; instance_exists(goldfish)) {
 
   goalDir = point_direction(x, y, goldfish.x, goldfish.y);
   
