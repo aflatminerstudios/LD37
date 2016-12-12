@@ -62,6 +62,10 @@ var bottomOfTankY = room_height - 200
 if(y &lt; bottomOfTankY) {
   y = y + fallSpeed;
   x = x + random_range(-wobbleWidth/2, wobbleWidth/2);
+  
+  var scaleFactor = 1 - power((y/(room_height - 200)),5);
+  image_xscale = scaleFactor;
+  image_yscale = scaleFactor;
 }
 </string>
           </argument>
