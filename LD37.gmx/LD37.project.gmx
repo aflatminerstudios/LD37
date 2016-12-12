@@ -31,7 +31,14 @@
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprite>sprites\sprCancelButton</sprite>
     <sprites name="Plants">
-      <sprite>sprites\sprTallPlantForeground</sprite>
+      <sprite>sprites\sprTallPlantForegroundStatic</sprite>
+      <sprite>sprites\sprTallPlantForegroundTwoFrames</sprite>
+      <sprite>sprites\sprTallPlantForegroundThreeFrames</sprite>
+      <sprite>sprites\sprTallPlantForegroundFourFrames</sprite>
+      <sprite>sprites\sprTallPlantForegroundFiveFrames</sprite>
+      <sprite>sprites\sprTallPlantForegroundSixFrames</sprite>
+      <sprite>sprites\sprTallPlantForegroundSevenFrames</sprite>
+      <sprite>sprites\sprTallPlantForegroundEightFrames</sprite>
       <sprite>sprites\sprTallPlantBackground</sprite>
     </sprites>
     <sprites name="Neutral Fish">
@@ -100,12 +107,15 @@
     </scripts>
     <scripts name="Tank Population">
       <script>scripts\scrCreatePlant.gml</script>
+      <script>scripts\scrCreateTallPlantForeground.gml</script>
+      <script>scripts\scrUpdateTallPlantForegroundSprite.gml</script>
       <script>scripts\scrCreateHostileFish.gml</script>
       <script>scripts\scrCreateNeutralFish.gml</script>
     </scripts>
     <script>scripts\scrAwardAchievement.gml</script>
     <script>scripts\scrGetAchieveName.gml</script>
     <script>scripts\scrHideCatInBackground.gml</script>
+    <script>scripts\scrPercentOfRange.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontNormal</font>
