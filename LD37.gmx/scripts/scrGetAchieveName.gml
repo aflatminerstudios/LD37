@@ -13,18 +13,20 @@ if (which == "eat35flakes") {
   return "Survivor"
 } else if (which == "flakes15game") {
   return "Glutton";
-} else if (which = "score250game") {
+} else if (which == "score250game") {
   return "Lebron";
-} else if (which = "stareAtWall") {
+} else if (which == "stareAtWall") {
   return "Nietzsche";
-} else if (which = "shareFood") {
+} else if (which == "shareFood") {
   return "Sharing is Caring";
-} else if (which = "exploreCorners") {
+} else if (which == "exploreCorners") {
   return "Dora the Explorer";
-} else if (which = "lazyBum") {
+} else if (which == "lazyBum") {
   return "Lazy Bum";
-} else if (which = "memoryLoss") {
+} else if (which == "memoryLoss") {
   return "Short-term Memory";
+} else if (which == "pissedShrimp") {
+  return "Get Off My Lawn";
 }
 
 

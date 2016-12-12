@@ -247,6 +247,9 @@ if(moveState != "irritated") {
   moveState = "irritated";
   sprite_index = irritatedSprite;
   alarm[0] = irritatedTime;
+  with (objAchievementTracker) {
+    shrimp++;
+  }
 } 
 
 </string>

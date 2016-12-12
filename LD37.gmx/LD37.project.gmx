@@ -29,6 +29,7 @@
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprCatPaw</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
+    <sprite>sprites\sprCancelButton</sprite>
     <sprites name="Plants">
       <sprite>sprites\sprTallPlantForeground</sprite>
       <sprite>sprites\sprTallPlantBackground</sprite>
@@ -88,6 +89,7 @@
     </scripts>
     <scripts name="Tank Population">
       <script>scripts\scrCreatePlant.gml</script>
+      <script>scripts\scrCreateHostileFish.gml</script>
       <script>scripts\scrCreateNeutralFish.gml</script>
     </scripts>
     <script>scripts\scrAwardAchievement.gml</script>
@@ -140,6 +142,7 @@
         <object>objects\objSuckerFish</object>
       </objects>
       <objects name="Hostile Fish">
+        <object>objects\objBettaFish</object>
         <object>objects\objHostileFish</object>
       </objects>
     </objects>
@@ -149,6 +152,7 @@
     <object>objects\objPermanentObject</object>
     <object>objects\objBubble</object>
     <object>objects\objFilterBubbles</object>
+    <object>objects\objCancelButton</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
