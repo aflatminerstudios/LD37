@@ -1,7 +1,7 @@
 /// scrCreateNeutralFish()
 
 var newFishType = choose(objTetra, objTetra, objShrimp, objShrimp, objSuckerFish);
-newFishType = choose(objShrimp); // Remove me when done -- Micha TODO
+newFishType = objShrimp; // Remove me -- Micha DEBUG
 // Only have one suckerfish at a time. Should move this into a better spot
 if(newFishType == objSuckerFish && instance_number(objSuckerFish) >= 1)
   return false; // Just exit out early. I don't trust "exit"

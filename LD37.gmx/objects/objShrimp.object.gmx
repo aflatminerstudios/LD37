@@ -67,6 +67,68 @@ image_speed = 10/room_speed;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// setup bubble variables
+
+bubbleCooldownMinimum = room_speed*1;
+bubbleCooldownMaximum = room_speed*2;
+
+alarm[8] = irandom_range(bubbleCooldownMinimum, bubbleCooldownMaximum);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Make a bubble 
+
+mouthX = x + lengthdir_x(13, direction);
+mouthY = y + lengthdir_y(-30, direction);
+
+show_debug_message("Creating a shrimp bubble at (" + string(mouthX) + ", " + string(mouthY) + ")");
+instance_create(mouthX, mouthY, objBubble);
+if(random(1) &lt; 0.2) {
+show_debug_message("Creating a second shrimp bubble at (" + string(mouthX) + ", " + string(mouthY) + ")");
+  instance_create(mouthX + 5, mouthY - 15, objBubble);
+}
+
+// Restart bubble alarm
+alarm[8] = random_range(bubbleCooldownMinimum, bubbleCooldownMaximum);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="0">
       <action>
@@ -147,10 +209,12 @@ if(moveState == "move") {
   x = x + facing*moveSpeed;
   
   if(bbox_right &gt; RIGHTSIDEOFTANK) {
-    facing = -1
+    facing = -1;
+    direction = 180;
     image_xscale = abs(image_xscale) * facing;
   } else if(bbox_left &lt; LEFTSIDEOFTANK) {
-    facing = 1
+    facing = 1;
+    direction = 0;
     image_xscale = abs(image_xscale) * facing;
   }
 }
