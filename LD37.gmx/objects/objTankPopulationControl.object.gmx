@@ -28,8 +28,8 @@
             <string>/// Instance variables
 
 
-minPlants = 5;
-maxPlants = 10;
+minPlants = 3;
+maxPlants = 7;
 
 minNeutralFish = 0;
 maxNeutralFish = 4;
@@ -151,7 +151,6 @@ if(alarm[belowMinimumRespawnAlarm] &lt;= 0) {
   if(instance_number(objPlant) &lt; minPlants ||
      instance_number(objNeutralFish) &lt; minNeutralFish ||
      instance_number(objHostileFish) &lt; minHostileFish)
-      show_debug_message("Population below minimum.");
       alarm[belowMinimumRespawnAlarm] = belowMinimumRespawnCooldown;
 }
 </string>

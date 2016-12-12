@@ -56,7 +56,7 @@ alarm[10] is used for the despawn countdown/fade
             <string>/// Instance variables
 
 baseAlphaValue = 1.0;
-timeToFadeOut = room_speed*5; // Time in steps between offscreen detection and despawn
+timeToFadeOut = room_speed*3; // Time in steps between offscreen detection and despawn
 isFadingOut = false;
 
 timeToFadeIn = room_speed*0.2; // Time in steps between sight and full alpha

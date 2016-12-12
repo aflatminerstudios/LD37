@@ -76,6 +76,10 @@ if (!is_undefined(get)) {
     //show_debug_message(r_str);
   }
 }
+
+with (objGameOverControl) {
+  alarm[1] = room_speed;
+}
 </string>
           </argument>
         </arguments>

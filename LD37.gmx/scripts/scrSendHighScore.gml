@@ -32,6 +32,9 @@ with (objPersistentObject) {
     scrSendAchieve(achievements[i], objTextInput.text);
   }
 }
+
+
 with (objGameOverControl) {
-  alarm[1] = room_speed;
+  alarm[1] = room_speed * 10;
 }
+

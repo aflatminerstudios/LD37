@@ -2,7 +2,7 @@
 
 var instance = argument0;
 
-var rearViewWidth = 200;
+var rearViewWidth = 100;
 var frontViewWidth = 800;
 var topViewHeight = 600;
 var bottomViewHeight = 600;
