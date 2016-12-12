@@ -226,7 +226,7 @@ if (!exploreCorners) {
 
   if (!exploreCornersTopLeft) {
     with (objGoldfish) {
-      if (x &lt; 200 &amp;&amp; y &lt; 200) {
+      if (x &lt; LEFTSIDEOFTANK + 200 &amp;&amp; y &lt; TOPOFTANK + 200) {
         other.exploreCornersTopLeft = true;
       }
     }
@@ -234,7 +234,7 @@ if (!exploreCorners) {
   
   if (!exploreCornersTopRight) {
     with (objGoldfish) {
-      if (x &gt; room_width - 200 &amp;&amp; y &lt; 200) {
+      if (x &gt; RIGHTSIDEOFTANK - 200 &amp;&amp; y &lt; TOPOFTANK + 200) {
         other.exploreCornersTopRight = true;
       }
     }  
@@ -242,7 +242,7 @@ if (!exploreCorners) {
   
   if (!exploreCornersBotLeft) {
     with (objGoldfish) {
-      if (x &lt; 200 &amp;&amp; y &gt; room_height - 200) {
+      if (x &lt; LEFTSIDEOFTANK + 200 &amp;&amp; y &gt; BOTTOMOFTANK - 200) {
         other.exploreCornersBotLeft = true;
       }
     }  
@@ -250,7 +250,7 @@ if (!exploreCorners) {
   
   if (!exploreCornersBotRight) {
     with (objGoldfish) {
-      if (x &gt; room_width - 200 &amp;&amp; y &gt; room_height -200) {
+      if (x &gt; RIGHTSIDEOFTANK - 200 &amp;&amp; y &gt; BOTTOMOFTANK -200) {
         other.exploreCornersBotRight = true;
       }
     }  
