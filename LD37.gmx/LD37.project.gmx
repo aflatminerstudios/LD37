@@ -29,7 +29,9 @@
     <sprite>sprites\sprBarrier</sprite>
     <sprite>sprites\sprBarrierSeeThrough</sprite>
     <sprite>sprites\sprCatPaw</sprite>
+    <sprite>sprites\sprHighScorePressed</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
+    <sprite>sprites\sprCancelPressed</sprite>
     <sprite>sprites\sprCancelButton</sprite>
     <sprites name="Plants">
       <sprite>sprites\sprTallPlantForeground</sprite>
@@ -82,6 +84,7 @@
     <sprite>sprites\sprSmallBubble</sprite>
     <sprite>sprites\sprSmallestBubble</sprite>
     <sprite>sprites\sprDeadGoldfish</sprite>
+    <sprite>sprites\sprAngelFish</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>
@@ -149,6 +152,9 @@
     <objects name="GameOver">
       <object>objects\objHighScoreSend</object>
       <object>objects\objTextInput</object>
+      <object>objects\objHighScoreButton</object>
+      <object>objects\objAngelFish</object>
+      <object>objects\objCancelButton</object>
       <object>objects\objGameOverControl</object>
       <object>objects\objAchievementFinder</object>
     </objects>
@@ -174,13 +180,12 @@
     </objects>
     <object>objects\objPersistentObject</object>
     <object>objects\objAchievementToast</object>
-    <object>objects\objHighScoreButton</object>
     <object>objects\objPermanentObject</object>
     <object>objects\objBubble</object>
     <object>objects\objFilterBubbles</object>
-    <object>objects\objCancelButton</object>
     <object>objects\objDeadGoldfish</object>
     <object>objects\objFilterTube</object>
+    <object>objects\objCOD</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\roomLogo</room>
