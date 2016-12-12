@@ -36,6 +36,7 @@ alarm[0] = room_speed * (random(flakeMax - flakeMin) + flakeMin);
 
 catMin = 5;
 catMax = 30;
+isCatComing = false;
 
 //Spawn cat paw
 alarm[1] = room_speed * (random(catMax - catMin) + catMin);
@@ -111,14 +112,22 @@ room_goto(roomTitle);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Spawn cat paw
+            <string>///Spawn cat paw/start cat on the way to tank
 
-if (instance_number(objCatPaw) &lt; 1) {
-  var catX = irandom(room_width - 400) + 200;
-  instance_create(catX, -160, objCatPaw);
+if(isCatComing) {
+  if (instance_number(objCatPaw) &lt; 1) {
+    var catX = irandom(room_width - 400) + 200;
+    instance_create(catX, -160, objCatPaw);
+  }
+  isCatComing = false;
+  alarm[1] = room_speed * random_range(catMin, catMax);
+} else {
+  isCatComing = true;
+  scrHideCatInBackground(true);
+  alarm[1] = room_speed*2;
 }
 
-alarm[1] = room_speed * (random(catMax - catMin) + catMin);
+
 </string>
           </argument>
         </arguments>

@@ -105,6 +105,7 @@
     </scripts>
     <script>scripts\scrAwardAchievement.gml</script>
     <script>scripts\scrGetAchieveName.gml</script>
+    <script>scripts\scrHideCatInBackground.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fontNormal</font>
