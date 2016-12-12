@@ -47,6 +47,11 @@
     </sprites>
     <sprite>sprites\sprAchievementOpen</sprite>
     <sprite>sprites\sprAchievementClose</sprite>
+    <sprite>sprites\sprFishPellet</sprite>
+    <sprite>sprites\sprFishFlake1</sprite>
+    <sprite>sprites\sprFishFlake2</sprite>
+    <sprite>sprites\sprFishFlake3</sprite>
+    <sprite>sprites\sprFishFlake4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgBehindTank</background>

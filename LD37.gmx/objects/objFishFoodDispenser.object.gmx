@@ -28,7 +28,8 @@
             <string>/// Instance Variables
 
 
-foodType = choose(objFishFlakes, objFishFlakes, objFishFoodPellets);
+foodType = choose(objFishFlakes, objFishFlakes, objFishFlakes, objFishFoodPellets);
+show_debug_message(foodType);
 foodPerSecond = 2;
 dispenseQuantity = 10;
 dispenseWidth = 200;
