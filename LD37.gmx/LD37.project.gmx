@@ -27,6 +27,7 @@
       <sprite>sprites\sprTitleInstructionsText</sprite>
     </sprites>
     <sprite>sprites\sprBarrier</sprite>
+    <sprite>sprites\sprBarrierSeeThrough</sprite>
     <sprite>sprites\sprCatPaw</sprite>
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprite>sprites\sprCancelButton</sprite>
