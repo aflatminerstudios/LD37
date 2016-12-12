@@ -46,6 +46,12 @@
         <sprite>sprites\sprSuckerFishMoving</sprite>
       </sprites>
     </sprites>
+    <sprites name="Hostile Fish">
+      <sprite>sprites\sprVampireCrabBackground</sprite>
+      <sprite>sprites\sprVampireCrabClaw</sprite>
+      <sprite>sprites\sprVampireCrabClawIdle</sprite>
+      <sprite>sprites\sprVampireCrabForeground</sprite>
+    </sprites>
     <sprite>sprites\sprAchievementOpen</sprite>
     <sprite>sprites\sprAchievementClose</sprite>
     <sprites name="Fish Food">
@@ -147,8 +153,9 @@
         <object>objects\objSuckerFish</object>
       </objects>
       <objects name="Hostile Fish">
-        <object>objects\objBettaFish</object>
         <object>objects\objHostileFish</object>
+        <object>objects\objBettaFish</object>
+        <object>objects\objVampireCrab</object>
       </objects>
     </objects>
     <object>objects\objPersistentObject</object>
@@ -169,9 +176,9 @@
   <constants number="5">
     <constant name="SERVER_ADDRESS">"http://www.catbirdgames.com/fish/"</constant>
     <constant name="TOPOFTANK">130</constant>
-    <constant name="BOTTOMOFTANK">1000</constant>
+    <constant name="BOTTOMOFTANK">1150</constant>
     <constant name="LEFTSIDEOFTANK">200</constant>
-    <constant name="RIGHTSIDEOFTANK">1400</constant>
+    <constant name="RIGHTSIDEOFTANK">1800</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
