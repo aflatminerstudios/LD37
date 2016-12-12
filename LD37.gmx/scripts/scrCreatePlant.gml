@@ -8,6 +8,8 @@ var possibleY = BOTTOMOFTANK + irandom(20);
 var newInhabitant;
 if(newPlantType == objTallPlantForeground)
   newInhabitant = scrCreateTallPlantForeground();
+else if(newPlantType == objTallPlantBackground)
+  newInhabitant = scrCreateTallPlantBackground();
 else
   newInhabitant = instance_create(possibleX, possibleY, newPlantType);
 

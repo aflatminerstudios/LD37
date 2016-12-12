@@ -31,15 +31,26 @@
     <sprite>sprites\sprHighScoreButton</sprite>
     <sprite>sprites\sprCancelButton</sprite>
     <sprites name="Plants">
-      <sprite>sprites\sprTallPlantForegroundStatic</sprite>
-      <sprite>sprites\sprTallPlantForegroundTwoFrames</sprite>
-      <sprite>sprites\sprTallPlantForegroundThreeFrames</sprite>
-      <sprite>sprites\sprTallPlantForegroundFourFrames</sprite>
-      <sprite>sprites\sprTallPlantForegroundFiveFrames</sprite>
-      <sprite>sprites\sprTallPlantForegroundSixFrames</sprite>
-      <sprite>sprites\sprTallPlantForegroundSevenFrames</sprite>
-      <sprite>sprites\sprTallPlantForegroundEightFrames</sprite>
-      <sprite>sprites\sprTallPlantBackground</sprite>
+      <sprites name="Tall Plant Foreground">
+        <sprite>sprites\sprTallPlantForegroundEightFrames</sprite>
+        <sprite>sprites\sprTallPlantForegroundSevenFrames</sprite>
+        <sprite>sprites\sprTallPlantForegroundSixFrames</sprite>
+        <sprite>sprites\sprTallPlantForegroundFiveFrames</sprite>
+        <sprite>sprites\sprTallPlantForegroundFourFrames</sprite>
+        <sprite>sprites\sprTallPlantForegroundThreeFrames</sprite>
+        <sprite>sprites\sprTallPlantForegroundTwoFrames</sprite>
+        <sprite>sprites\sprTallPlantForegroundStatic</sprite>
+      </sprites>
+      <sprites name="Tall Plant Background">
+        <sprite>sprites\sprTallPlantBackgroundEightFrames</sprite>
+        <sprite>sprites\sprTallPlantBackgroundSevenFrames</sprite>
+        <sprite>sprites\sprTallPlantBackgroundSixFrames</sprite>
+        <sprite>sprites\sprTallPlantBackgroundFiveFrames</sprite>
+        <sprite>sprites\sprTallPlantBackgroundFourFrames</sprite>
+        <sprite>sprites\sprTallPlantBackgroundThreeFrames</sprite>
+        <sprite>sprites\sprTallPlantBackgroundTwoFrames</sprite>
+        <sprite>sprites\sprTallPlantBackgroundStatic</sprite>
+      </sprites>
     </sprites>
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
@@ -108,7 +119,9 @@
     <scripts name="Tank Population">
       <script>scripts\scrCreatePlant.gml</script>
       <script>scripts\scrCreateTallPlantForeground.gml</script>
+      <script>scripts\scrCreateTallPlantBackground.gml</script>
       <script>scripts\scrUpdateTallPlantForegroundSprite.gml</script>
+      <script>scripts\scrUpdateTallPlantBackgroundSprite.gml</script>
       <script>scripts\scrCreateHostileFish.gml</script>
       <script>scripts\scrCreateNeutralFish.gml</script>
     </scripts>
