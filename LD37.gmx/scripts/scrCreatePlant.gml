@@ -5,7 +5,14 @@ var newPlantType = choose(objTallPlantForeground, objTallPlantForeground, objTal
 var possibleX = irandom_range(LEFTSIDEOFTANK + 75, RIGHTSIDEOFTANK - 75);
 var possibleY = BOTTOMOFTANK + irandom(20);
 
-var newInhabitant = instance_create(possibleX, possibleY, newPlantType);
+var newInhabitant;
+if(newPlantType == objTallPlantForeground)
+  newInhabitant = scrCreateTallPlantForeground();
+else if(newPlantType == objTallPlantBackground)
+  newInhabitant = scrCreateTallPlantBackground();
+else
+  newInhabitant = instance_create(possibleX, possibleY, newPlantType);
+
 if(scrIsInFrontOfFish(newInhabitant)) {
   // Abort the creation
   with(newInhabitant) {
