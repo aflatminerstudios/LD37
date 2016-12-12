@@ -14,7 +14,7 @@ $dbConnection = new PDO("mysql:dbname=".$db.";host=127.0.0.1;charset=utf8", $u, 
 
 $dbConnection->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 $dbConnection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$whitelist = array('eat35flakes', 'totalgames20', 'totalScore1000', 'totaltime15min', 'live60s', 'flakes15game', 'score250game', 'stareAtWall', 'shareFood', 'exploreCorners', 'lazyBum', 'memoryLoss', 'pissedShrimp');
+$whitelist = array('eat35flakes', 'totalgames20', 'totalScore1000', 'totaltime15min', 'live60s', 'flakes15game', 'score250game', 'stareAtWall', 'shareFood', 'exploreCorners', 'lazyBum', 'memoryLoss', 'pissedShrimp', 'kungfu');
 if (!in_array($which, $whitelist)) {
 	$which = 'ASDFGHLJLKJ';
 }
