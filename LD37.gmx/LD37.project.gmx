@@ -121,6 +121,7 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\pathPaw</path>
+    <path>paths\pathBubble</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\scrMoveGoldfish.gml</script>
@@ -215,7 +216,9 @@
     <object>objects\objAchievementToast</object>
     <object>objects\objPermanentObject</object>
     <object>objects\objBubble</object>
+    <object>objects\objParabolaBubble</object>
     <object>objects\objFilterBubbles</object>
+    <object>objects\objFilterDispenser</object>
     <object>objects\objDeadGoldfish</object>
     <object>objects\objFilterTube</object>
     <object>objects\objCOD</object>
