@@ -162,10 +162,11 @@
   </fonts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
-      <object>objects\objTitleTube</object>
+      <object>objects\objTitleBubbles</object>
       <object>objects\objLogoControl</object>
       <object>objects\objGoldfishTitle</object>
       <object>objects\objTitleControl</object>
+      <object>objects\objTitlePlant</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
       <object>objects\objTitleText</object>
