@@ -4,11 +4,11 @@ var newPlantType = choose(objTallPlantForeground, objTallPlantForeground,
                           objTallPlantBackground, objTallPlantBackground, objTallPlantBackground);
 
 // Comment this in/out to control short plants in the game
-/*
+
 newPlantType = choose(objTallPlantForeground, objTallPlantForeground, 
-                          objTallPlantBackground, objTallPlantBackground, objTallPlantBackground,
-                          objShortPlant1, objShortPlant2, objShortPlant3);
-*/
+                      objTallPlantBackground, objTallPlantBackground,
+                      objShortPlant1, objShortPlant2);
+
 var possibleX = irandom_range(LEFTSIDEOFTANK + 75, RIGHTSIDEOFTANK - 75);
 var possibleY = BOTTOMOFTANK + irandom(20);
 
