@@ -88,7 +88,7 @@ currentPhase = (currentPhase + wobbleFrequency) % 2*pi;
             <kind>1</kind>
             <string>///Destroy if off screen
 
-if (y &lt; TOPOFTANK) {
+if (y &lt; TOPOFTANK &amp;&amp; room != roomLogo) {
   instance_destroy();
 }
 </string>
