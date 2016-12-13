@@ -114,6 +114,8 @@
     <sprite>sprites\sprAngelFish</sprite>
     <sprite>sprites\sprPoop</sprite>
     <sprite>sprites\sprPebbleMidground</sprite>
+    <sprite>sprites\sprURLButton</sprite>
+    <sprite>sprites\sprURLButtonPressed</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgLogoScreen</background>
@@ -168,10 +170,11 @@
   </fonts>
   <objects name="objects">
     <objects name="Logo/Title Screen">
-      <object>objects\objTitleTube</object>
+      <object>objects\objTitleBubbles</object>
       <object>objects\objLogoControl</object>
       <object>objects\objGoldfishTitle</object>
       <object>objects\objTitleControl</object>
+      <object>objects\objTitlePlant</object>
       <object>objects\objTitleFG</object>
       <object>objects\objTitleParallax</object>
       <object>objects\objTitleText</object>
@@ -193,6 +196,7 @@
       <object>objects\objHighScoreSend</object>
       <object>objects\objTextInput</object>
       <object>objects\objHighScoreButton</object>
+      <object>objects\objURLButton</object>
       <object>objects\objAngelFish</object>
       <object>objects\objCancelButton</object>
       <object>objects\objGameOverControl</object>

@@ -196,7 +196,7 @@ if (objTextInput.locked) {
 //draw_set_font(fontNormal);
 draw_text(645, 224, string(score));
 
-draw_text(645, 112, string_format(objPersistentObject.time, 0, 2) + " sec");
+draw_text(645, 112, string_format(objPersistentObject.time, 0, 1) + " sec");
 
 draw_text(645, 384, string(objPersistentObject.flakes));
 

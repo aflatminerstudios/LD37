@@ -55,9 +55,23 @@ idleTime = room_speed*4;
 moveState = "idle"; // "idle", "move"
 alarm[0] = 1;
 
-image_speed = 12/room_speed;
+image_speed = 0.5;
 
 facing = 1; // 1 = right, -1 = left
+
+
+
+if (y &lt; TOPOFTANK + sprite_height / 2) {
+  y = TOPOFTANK + sprite_height / 2 + 5;
+} else if (y &gt; BOTTOMOFTANK - sprite_height / 2) {
+  y = BOTTOMOFTANK - sprite_height / 2 - 5;
+}
+
+if (x &lt; LEFTSIDEOFTANK + sprite_width / 2) {
+  x = LEFTSIDEOFTANK + sprite_width / 2 + 5;
+} else if (x &gt; RIGHTSIDEOFTANK - sprite_width / 2) {
+  x = RIGHTSIDEOFTANK - sprite_width / 2 - 5;
+}
 </string>
           </argument>
         </arguments>
