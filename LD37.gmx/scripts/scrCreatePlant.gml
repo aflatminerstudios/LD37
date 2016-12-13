@@ -7,7 +7,7 @@ var newPlantType = choose(objTallPlantForeground, objTallPlantForeground,
 
 newPlantType = choose(objTallPlantForeground, objTallPlantForeground, 
                       objTallPlantBackground, objTallPlantBackground,
-                      objShortPlant1, objShortPlant2);
+                      objShortPlant1, objShortPlant2, objShortPlant3);
 
 var possibleX = irandom_range(LEFTSIDEOFTANK + 75, RIGHTSIDEOFTANK - 75);
 var possibleY = BOTTOMOFTANK + irandom(20);

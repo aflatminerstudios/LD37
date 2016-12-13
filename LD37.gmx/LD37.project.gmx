@@ -120,10 +120,10 @@
     <background>background\bgLogoBackground</background>
     <background>background\bgBehindTank</background>
     <background>background\bgBehindTankNoCat</background>
+    <background>background\bgCreepyCatFace</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
     <background>background\bgGameOverScreen</background>
-    <background>background\bgCreepyCatFace</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathPaw</path>
