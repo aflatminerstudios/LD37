@@ -29,17 +29,20 @@
 
 sprite_index = choose(sprBubble, sprSmallBubble, sprSmallBubble, sprSmallestBubble, sprSmallestBubble);
 
-vspeed = random_range(-4, -6);
 
-wobbleAmplitude = random_range(3, 5);
+path_speed = random_range(4, 6);
+
+wobbleAmplitude = random_range(5, 7);
 wobbleFrequency = random_range(0.04, 0.06)*pi; // Amount to increase per step, in radians
 currentPhase = 0;
 
 // Big bubbles go slightly faster and wobble a little less
 if(sprite_index == sprBubble) {
-  vspeed += -0.5; 
+  path_speed += 0.5; 
   wobbleAmplitude = wobbleAmplitude*0.8;
 }
+
+path_start(pathBubble, path_speed, path_action_stop, false);
 
 </string>
           </argument>
@@ -70,6 +73,8 @@ currentPhase = (currentPhase + wobbleFrequency) % 2*pi;
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="7" enumb="8">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -86,11 +91,9 @@ currentPhase = (currentPhase + wobbleFrequency) % 2*pi;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Destroy if off screen
+            <string>///destroy
 
-if (y &lt; TOPOFTANK &amp;&amp; room != roomLogo) {
-  instance_destroy();
-}
+instance_destroy();
 </string>
           </argument>
         </arguments>
@@ -116,9 +119,9 @@ if (y &lt; TOPOFTANK &amp;&amp; room != roomLogo) {
             <string>/// Draw bubble with sine wave offset
 
 lerpPhase = sin(currentPhase);
-xOffset = lerp(-wobbleAmplitude/2, wobbleAmplitude/2, lerpPhase);
+yOffset = lerp(-wobbleAmplitude/2, wobbleAmplitude/2, lerpPhase);
 
-draw_sprite(sprite_index, image_index, x + xOffset, y);
+draw_sprite(sprite_index, image_index, x, y + yOffset);
 </string>
           </argument>
         </arguments>
