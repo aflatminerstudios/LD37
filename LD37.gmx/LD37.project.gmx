@@ -117,9 +117,9 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bgLogoScreen</background>
+    <background>background\bgLogoBackground</background>
     <background>background\bgBehindTank</background>
     <background>background\bgBehindTankNoCat</background>
-    <background>background\bgLogoBackground</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
     <background>background\bgGameOverScreen</background>

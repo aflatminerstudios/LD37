@@ -11,7 +11,7 @@
   <colour>16744448</colour>
   <showcolour>-1</showcolour>
   <code></code>
-  <enableViews>0</enableViews>
+  <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
@@ -68,7 +68,7 @@
     <instance objName="objTallPlantForeground" x="1056" y="1115" name="inst_EF318C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objVampireCrab" x="1600" y="984" name="inst_CEB64E7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFilterTube" x="104" y="88" name="inst_6C47CD9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPebbleMidground" x="1000" y="1180" name="inst_E7810C5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPebbleMidground" x="1000" y="1272" name="inst_E7810C5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFilterDispenser" x="112" y="56" name="inst_5B716D2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
