@@ -33,7 +33,7 @@
   <backgrounds>
     <background visible="-1" foreground="0" name="bgBehindTank" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="bgBehindTankNoCat" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
-    <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="bgCreepyCatFace" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="-1" foreground="0" name="bgTank" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -55,7 +55,7 @@
     <instance objName="objGoldfish" x="768" y="576" name="inst_1AB0CB60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTimer" x="288" y="0" name="inst_25EFC81A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBarrier" x="88" y="-8" name="inst_272EF0E0" locked="0" code="" scaleX="1" scaleY="43" colour="4294967295" rotation="0"/>
-    <instance objName="objBarrier" x="-8" y="1224" name="inst_F29E077F" locked="0" code="" scaleX="62.5" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objBarrier" x="0" y="1112" name="inst_F29E077F" locked="0" code="" scaleX="62.5" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objBarrier" x="1880" y="-24" name="inst_25D2DBD2" locked="0" code="" scaleX="1" scaleY="43.75" colour="4294967295" rotation="0"/>
     <instance objName="objBarrier" x="-16" y="88" name="inst_BD954D34" locked="0" code="" scaleX="63.75" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objHighScoreSend" x="0" y="0" name="inst_CBC365D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -68,7 +68,7 @@
     <instance objName="objTallPlantForeground" x="1056" y="1115" name="inst_EF318C84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objVampireCrab" x="1600" y="984" name="inst_CEB64E7C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFilterTube" x="104" y="88" name="inst_6C47CD9F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objPebbleMidground" x="1000" y="1180" name="inst_E7810C5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objPebbleMidground" x="1000" y="1272" name="inst_E7810C5D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objFilterDispenser" x="112" y="56" name="inst_5B716D2D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>

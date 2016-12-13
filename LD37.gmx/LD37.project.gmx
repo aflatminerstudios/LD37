@@ -60,6 +60,9 @@
         <sprite>sprites\sprTallPlantBackgroundTwoFrames</sprite>
         <sprite>sprites\sprTallPlantBackgroundStatic</sprite>
       </sprites>
+      <sprite>sprites\sprShortPlant1</sprite>
+      <sprite>sprites\sprShortPlant2</sprite>
+      <sprite>sprites\sprShortPlant3</sprite>
     </sprites>
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
@@ -116,12 +119,13 @@
   </sprites>
   <backgrounds name="background">
     <background>background\bgLogoScreen</background>
+    <background>background\bgLogoBackground</background>
     <background>background\bgBehindTank</background>
     <background>background\bgBehindTankNoCat</background>
-    <background>background\bgLogoBackground</background>
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
     <background>background\bgGameOverScreen</background>
+    <background>background\bgCreepyCatFace</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathPaw</path>
@@ -205,6 +209,9 @@
         <object>objects\objPlant</object>
         <object>objects\objTallPlantForeground</object>
         <object>objects\objTallPlantBackground</object>
+        <object>objects\objShortPlant1</object>
+        <object>objects\objShortPlant2</object>
+        <object>objects\objShortPlant3</object>
       </objects>
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>
