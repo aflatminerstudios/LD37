@@ -28,7 +28,7 @@
             <string>///setup eating variables
 
 hunger = 0;
-overStuffed = -100;
+overStuffed = -120;
 starved = 100;
 full = -50;
 hungry = 60;
