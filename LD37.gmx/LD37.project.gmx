@@ -123,6 +123,7 @@
     <background>background\bgTank</background>
     <background>background\bgForeground</background>
     <background>background\bgGameOverScreen</background>
+    <background>background\bgCreepyCatFace</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\pathPaw</path>
