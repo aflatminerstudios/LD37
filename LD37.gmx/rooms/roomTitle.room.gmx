@@ -55,8 +55,9 @@
     <instance objName="objTitleFG" x="800" y="300" name="inst_735C0115" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTitleText" x="1080" y="417" name="inst_92F18362" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="objTitleInstructionsText" x="1080" y="547" name="inst_7CB65B7A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objGoldfishTitle" x="1466" y="403" name="inst_25A8EF59" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="objTitleTube" x="1464" y="320" name="inst_52A3E54E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objGoldfishTitle" x="1454" y="377" name="inst_25A8EF59" locked="0" code="xscale=-1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objTitleBubbles" x="1387" y="581" name="inst_52A3E54E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="objTitlePlant" x="1624" y="689" name="inst_9EC4D5D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
