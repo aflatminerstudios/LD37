@@ -111,6 +111,8 @@
     <sprite>sprites\sprAngelFish</sprite>
     <sprite>sprites\sprPoop</sprite>
     <sprite>sprites\sprPebbleMidground</sprite>
+    <sprite>sprites\sprURLButton</sprite>
+    <sprite>sprites\sprURLButtonPressed</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgLogoScreen</background>
@@ -190,6 +192,7 @@
       <object>objects\objHighScoreSend</object>
       <object>objects\objTextInput</object>
       <object>objects\objHighScoreButton</object>
+      <object>objects\objURLButton</object>
       <object>objects\objAngelFish</object>
       <object>objects\objCancelButton</object>
       <object>objects\objGameOverControl</object>
