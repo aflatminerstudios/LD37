@@ -60,6 +60,9 @@
         <sprite>sprites\sprTallPlantBackgroundTwoFrames</sprite>
         <sprite>sprites\sprTallPlantBackgroundStatic</sprite>
       </sprites>
+      <sprite>sprites\sprShortPlant1</sprite>
+      <sprite>sprites\sprShortPlant2</sprite>
+      <sprite>sprites\sprShortPlant3</sprite>
     </sprites>
     <sprites name="Neutral Fish">
       <sprite>sprites\sprTetra</sprite>
@@ -201,6 +204,9 @@
         <object>objects\objPlant</object>
         <object>objects\objTallPlantForeground</object>
         <object>objects\objTallPlantBackground</object>
+        <object>objects\objShortPlant1</object>
+        <object>objects\objShortPlant2</object>
+        <object>objects\objShortPlant3</object>
       </objects>
       <objects name="Neutral Fish">
         <object>objects\objNeutralFish</object>
